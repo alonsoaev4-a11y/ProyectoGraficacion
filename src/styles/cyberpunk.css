@@ -1,0 +1,411 @@
+/* ============================================
+   HERMAN PLATFORM - CYBERPUNK WHITE THEME
+   ============================================ */
+
+/* Background animado para módulos del proyecto */
+.project-module-bg {
+    background-color: #f8f9fa;
+    background-image:
+        linear-gradient(90deg, rgba(0, 171, 191, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(0, 171, 191, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+    min-height: 100vh;
+    position: relative;
+    color: var(--text-primary);
+}
+
+/* Gradiente sutil de fondo */
+.cyber-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.8) 0%,
+            transparent 40%,
+            rgba(157, 34, 230, 0.03) 100%);
+    pointer-events: none;
+}
+
+/* ============================================
+   CARDS Y PANELES
+   ============================================ */
+.cyber-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 171, 191, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+.cyber-card:hover {
+    border-color: rgba(0, 171, 191, 0.3);
+    box-shadow:
+        0 8px 32px rgba(0, 171, 191, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* Card seleccionada/activa */
+.cyber-card.active {
+    border-color: rgba(0, 171, 191, 0.6);
+    background: rgba(0, 171, 191, 0.03);
+    box-shadow:
+        0 0 20px rgba(0, 171, 191, 0.1),
+        inset 0 0 20px rgba(0, 171, 191, 0.02);
+}
+
+/* ============================================
+   HEADERS Y TÍTULOS
+   ============================================ */
+.cyber-header {
+    background: linear-gradient(90deg, #00abbf 0%, #9d22e6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.cyber-btn-primary {
+    background: linear-gradient(135deg, #00abbf 0%, #9d22e6 100%);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 171, 191, 0.2);
+}
+
+.cyber-btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.cyber-btn-primary:hover::before {
+    left: 100%;
+}
+
+.cyber-btn-primary:hover {
+    box-shadow:
+        0 0 20px rgba(0, 171, 191, 0.3),
+        0 0 40px rgba(157, 34, 230, 0.2);
+    transform: translateY(-2px);
+}
+
+.cyber-btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Botón secundario */
+.cyber-btn-secondary {
+    background: transparent;
+    border: 2px solid rgba(0, 171, 191, 0.3);
+    color: #00abbf;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cyber-btn-secondary:hover {
+    background: rgba(0, 171, 191, 0.05);
+    border-color: #00abbf;
+    box-shadow: 0 0 20px rgba(0, 171, 191, 0.1);
+}
+
+/* Botón peligro */
+.cyber-btn-danger {
+    background: linear-gradient(135deg, #d4183d 0%, #ff4d6d 100%);
+    color: white;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(212, 24, 61, 0.2);
+}
+
+.cyber-btn-danger:hover {
+    box-shadow: 0 0 20px rgba(212, 24, 61, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   INPUTS Y FORM ELEMENTS
+   ============================================ */
+.cyber-input {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 171, 191, 0.15);
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: #1a1a2e;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.cyber-input::placeholder {
+    color: rgba(90, 90, 110, 0.5);
+}
+
+.cyber-input:focus {
+    outline: none;
+    border-color: #00abbf;
+    box-shadow:
+        0 0 0 3px rgba(0, 171, 191, 0.1),
+        0 0 10px rgba(0, 171, 191, 0.1);
+    background: #ffffff;
+}
+
+.cyber-textarea {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 171, 191, 0.15);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #1a1a2e;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 100%;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.cyber-textarea:focus {
+    outline: none;
+    border-color: #00abbf;
+    box-shadow:
+        0 0 0 3px rgba(0, 171, 191, 0.1),
+        0 0 10px rgba(0, 171, 191, 0.1);
+    background: #ffffff;
+}
+
+.cyber-select {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 171, 191, 0.15);
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: #1a1a2e;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cyber-select:focus {
+    outline: none;
+    border-color: #00abbf;
+    box-shadow: 0 0 0 3px rgba(0, 171, 191, 0.1);
+    background: #ffffff;
+}
+
+/* ============================================
+   BADGES Y TAGS
+   ============================================ */
+.cyber-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid;
+}
+
+.cyber-badge-funcional {
+    background: rgba(0, 171, 191, 0.1);
+    color: #008a99;
+    border-color: rgba(0, 171, 191, 0.2);
+}
+
+.cyber-badge-nofuncional {
+    background: rgba(255, 165, 0, 0.1);
+    color: #d98c00;
+    border-color: rgba(255, 165, 0, 0.2);
+}
+
+.cyber-badge-alta {
+    background: rgba(212, 24, 61, 0.1);
+    color: #bd1336;
+    border-color: rgba(212, 24, 61, 0.2);
+}
+
+.cyber-badge-media {
+    background: rgba(255, 193, 7, 0.1);
+    color: #d19e06;
+    border-color: rgba(255, 193, 7, 0.2);
+}
+
+.cyber-badge-baja {
+    background: rgba(0, 204, 106, 0.1);
+    color: #009950;
+    border-color: rgba(0, 204, 106, 0.2);
+}
+
+.cyber-badge-aprobado {
+    background: rgba(0, 204, 106, 0.1);
+    color: #009950;
+    border-color: rgba(0, 204, 106, 0.2);
+}
+
+.cyber-badge-pendiente {
+    background: rgba(255, 193, 7, 0.1);
+    color: #d19e06;
+    border-color: rgba(255, 193, 7, 0.2);
+}
+
+/* ============================================
+   SIDEBAR (dentro del proyecto)
+   ============================================ */
+.cyber-sidebar {
+    background: #ffffff;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    min-height: 100vh;
+}
+
+.cyber-sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #5a5a6e;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    border-left: 3px solid transparent;
+}
+
+.cyber-sidebar-item:hover {
+    background: rgba(0, 171, 191, 0.05);
+    color: #00abbf;
+}
+
+.cyber-sidebar-item.active {
+    background: linear-gradient(90deg, rgba(0, 171, 191, 0.08), transparent);
+    color: #00abbf;
+    border-left-color: #00abbf;
+}
+
+.cyber-sidebar-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: #00abbf;
+    box-shadow: 0 0 10px rgba(0, 171, 191, 0.3);
+}
+
+/* ============================================
+   LISTA DE ITEMS (requisitos, casos de uso)
+   ============================================ */
+.cyber-list-item {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+}
+
+.cyber-list-item:hover {
+    border-left-color: rgba(0, 171, 191, 0.4);
+    background: rgba(0, 171, 191, 0.03);
+    transform: translateX(4px);
+}
+
+.cyber-list-item.selected {
+    border-left-color: #00abbf;
+    background: rgba(0, 171, 191, 0.05);
+}
+
+/* ============================================
+   TOOLTIP PERSONALIZADO
+   ============================================ */
+.cyber-tooltip {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 171, 191, 0.2);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #1a1a2e;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(0, 171, 191, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 171, 191, 0.4);
+    }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+.cyber-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+    margin: 16px 0;
+}
+
+.cyber-text-primary {
+    color: #00abbf;
+}
+
+.cyber-text-secondary {
+    color: #5a5a6e;
+}
+
+.cyber-text-danger {
+    color: #d4183d;
+}
+
+.cyber-text-success {
+    color: #00cc6a;
+}

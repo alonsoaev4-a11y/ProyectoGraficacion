@@ -1,0 +1,790 @@
+/* ============================================================
+   METADATOS PAGE — Estilos específicos del módulo
+   ============================================================ */
+
+/* Layout principal: sidebar fijo + contenido con scroll */
+.meta-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+/* ============================================================
+   HEADER FIJO
+   ============================================================ */
+.meta-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 171, 191, 0.12);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Nombre del proyecto editable inline */
+.meta-nombre-input {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  background: transparent;
+  border: none;
+  border-bottom: 2px dashed rgba(0, 171, 191, 0.3);
+  padding: 2px 8px;
+  outline: none;
+  min-width: 200px;
+  transition: border-color 0.2s ease;
+}
+
+.meta-nombre-input:focus {
+  border-bottom-color: #00abbf;
+}
+
+.meta-nombre-input::placeholder {
+  color: rgba(90, 90, 110, 0.4);
+  font-weight: 400;
+}
+
+/* ============================================================
+   SIDEBAR DE NAVEGACIÓN LATERAL
+   ============================================================ */
+.meta-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 65px;
+  height: calc(100vh - 65px);
+  overflow-y: auto;
+  padding: 24px 16px;
+  background: #ffffff;
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-sidebar-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9090a0;
+  padding: 0 8px;
+  margin-bottom: 12px;
+}
+
+/* Ítem individual del sidebar */
+.meta-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: #5a5a6e;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+
+.meta-sidebar-item:hover {
+  background: rgba(0, 171, 191, 0.05);
+  color: #00abbf;
+}
+
+.meta-sidebar-item.active {
+  background: linear-gradient(90deg, rgba(0, 171, 191, 0.08), transparent);
+  color: #00abbf;
+  border-left-color: #00abbf;
+}
+
+/* Indicadores de progreso de sección */
+.meta-progress-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.meta-progress-dot.empty {
+  background: #e0e0e8;
+}
+
+.meta-progress-dot.partial {
+  background: #f59e0b;
+}
+
+.meta-progress-dot.complete {
+  background: #10b981;
+}
+
+/* ============================================================
+   CONTENIDO PRINCIPAL
+   ============================================================ */
+.meta-content {
+  flex: 1;
+  padding: 32px 40px;
+  overflow-y: auto;
+  max-width: 900px;
+}
+
+/* Cada sección del formulario */
+.meta-section {
+  margin-bottom: 48px;
+  scroll-margin-top: 80px;
+}
+
+.meta-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 171, 191, 0.12);
+}
+
+.meta-section-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00abbf 0%, #9d22e6 100%);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.meta-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.meta-section-subtitle {
+  font-size: 0.8rem;
+  color: #9090a0;
+  margin: 0;
+}
+
+/* Grupo de campo del formulario */
+.meta-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.meta-field-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.meta-field-label span {
+  color: #d4183d;
+  margin-left: 2px;
+}
+
+/* ============================================================
+   OVERLAY DE SECCIÓN DESHABILITADA
+   ============================================================ */
+.meta-section-wrapper {
+  position: relative;
+}
+
+.meta-section-disabled-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(248, 249, 250, 0.88);
+  backdrop-filter: blur(2px);
+  border-radius: 12px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px dashed rgba(0, 171, 191, 0.2);
+}
+
+.meta-section-disabled-overlay p {
+  font-size: 0.85rem;
+  color: #9090a0;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ============================================================
+   CHIPS DE TIPO DE SISTEMA
+   ============================================================ */
+.meta-chips-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.meta-chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1.5px solid rgba(0, 171, 191, 0.25);
+  background: transparent;
+  color: #5a5a6e;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.meta-chip:hover {
+  border-color: #00abbf;
+  color: #00abbf;
+  background: rgba(0, 171, 191, 0.05);
+}
+
+.meta-chip.selected {
+  background: linear-gradient(135deg, rgba(0, 171, 191, 0.12), rgba(157, 34, 230, 0.06));
+  border-color: #00abbf;
+  color: #007a8a;
+  font-weight: 600;
+}
+
+/* ============================================================
+   CARDS DE MÉTODOS (Sección 2)
+   ============================================================ */
+.meta-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.meta-method-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(0, 171, 191, 0.1);
+  border-radius: 12px;
+  padding: 18px 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.meta-method-card:hover {
+  border-color: rgba(0, 171, 191, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 171, 191, 0.08);
+}
+
+.meta-method-card.active {
+  border-color: #00abbf;
+  background: rgba(0, 171, 191, 0.04);
+  box-shadow: 0 0 0 2px rgba(0, 171, 191, 0.15), 0 6px 20px rgba(0, 171, 191, 0.1);
+}
+
+.meta-method-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(0, 171, 191, 0.1), rgba(157, 34, 230, 0.08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00abbf;
+}
+
+.meta-method-card.active .meta-method-icon {
+  background: linear-gradient(135deg, #00abbf, #9d22e6);
+  color: white;
+}
+
+.meta-method-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.meta-method-desc {
+  font-size: 0.75rem;
+  color: #7070a0;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Toggle en la card */
+.meta-method-toggle {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  background: #e0e0e8;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.meta-method-toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.meta-method-card.active .meta-method-toggle {
+  background: linear-gradient(135deg, #00abbf, #9d22e6);
+}
+
+.meta-method-card.active .meta-method-toggle::after {
+  transform: translateX(16px);
+}
+
+/* ============================================================
+   TAG INPUT
+   ============================================================ */
+.meta-tag-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 171, 191, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  min-height: 44px;
+  cursor: text;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meta-tag-input-container:focus-within {
+  border-color: #00abbf;
+  box-shadow: 0 0 0 3px rgba(0, 171, 191, 0.1);
+  background: #ffffff;
+}
+
+.meta-tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(0, 171, 191, 0.12), rgba(157, 34, 230, 0.06));
+  border: 1px solid rgba(0, 171, 191, 0.2);
+  color: #007a8a;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.meta-tag-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9090b0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.meta-tag-remove:hover {
+  color: #d4183d;
+}
+
+.meta-tag-text-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.85rem;
+  color: #1a1a2e;
+  min-width: 120px;
+  flex: 1;
+}
+
+/* ============================================================
+   LISTA DINÁMICA
+   ============================================================ */
+.meta-lista-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 171, 191, 0.1);
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  color: #1a1a2e;
+}
+
+.meta-lista-item span {
+  flex: 1;
+}
+
+/* ============================================================
+   RADIO Y CHECKBOX CUSTOM
+   ============================================================ */
+.meta-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meta-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(0, 171, 191, 0.2);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #5a5a6e;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.meta-radio-option:hover {
+  border-color: #00abbf;
+  color: #00abbf;
+}
+
+.meta-radio-option.selected {
+  border-color: #00abbf;
+  background: rgba(0, 171, 191, 0.06);
+  color: #007a8a;
+  font-weight: 600;
+}
+
+.meta-radio-option input {
+  display: none;
+}
+
+/* ============================================================
+   TOGGLE SWITCH
+   ============================================================ */
+.meta-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.meta-toggle {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: #e0e0e8;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.meta-toggle::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.meta-toggle.on {
+  background: linear-gradient(135deg, #00abbf, #9d22e6);
+}
+
+.meta-toggle.on::after {
+  transform: translateX(20px);
+}
+
+.meta-toggle-label {
+  font-size: 0.85rem;
+  color: #5a5a6e;
+}
+
+/* ============================================================
+   HISTORIA DE USUARIO — Constructor
+   ============================================================ */
+.meta-historia-builder {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 171, 191, 0.12);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.meta-historia-preview {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, rgba(0, 171, 191, 0.05), rgba(157, 34, 230, 0.03));
+  border: 1px solid rgba(0, 171, 191, 0.15);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #1a1a2e;
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  min-height: 40px;
+}
+
+.meta-historia-preview strong {
+  color: #00abbf;
+  font-style: normal;
+}
+
+/* Lista de historias creadas */
+.meta-historia-item {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 171, 191, 0.1);
+  border-left: 4px solid #00abbf;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 0.82rem;
+  color: #1a1a2e;
+}
+
+.meta-historia-id {
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: monospace;
+  color: #9090b0;
+}
+
+/* ============================================================
+   PANEL RESUMEN / JSON PREVIEW
+   ============================================================ */
+.meta-json-container {
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 20px;
+  overflow: auto;
+  max-height: 500px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.meta-json-key {
+  color: #00abbf;
+}
+
+.meta-json-string {
+  color: #00cc6a;
+}
+
+.meta-json-number {
+  color: #ffa500;
+}
+
+.meta-json-boolean {
+  color: #9d22e6;
+}
+
+.meta-json-null {
+  color: #888;
+}
+
+.meta-json-bracket {
+  color: #e0e0e0;
+}
+
+/* Barra de progreso */
+.meta-progreso-bar {
+  background: #e0e0e8;
+  border-radius: 8px;
+  height: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.meta-progreso-fill {
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00abbf, #9d22e6);
+  transition: width 0.4s ease;
+}
+
+/* ============================================================
+   RESPONSIVE — móvil: sidebar como menú desplegable
+   ============================================================ */
+@media (max-width: 768px) {
+  .meta-layout {
+    flex-direction: column;
+  }
+
+  .meta-sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .meta-sidebar-title {
+    display: none;
+  }
+
+  .meta-sidebar-item {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .meta-sidebar-item.active {
+    border-left: none;
+    border-bottom-color: #00abbf;
+    background: rgba(0, 171, 191, 0.05);
+  }
+
+  .meta-content {
+    padding: 20px 16px;
+  }
+
+  .meta-methods-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .meta-methods-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   FLAT LAYOUT — sin header ni mini-sidebar (dentro de DetalleProyecto)
+   ============================================================ */
+.meta-flat-layout {
+  padding: 28px 32px;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Sección en flat layout: panel con borde suave */
+.meta-section-flat {
+  margin-bottom: 28px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 171, 191, 0.1);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+}
+
+/* Cabecera de sección en modo flat */
+.meta-section-flat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 22px;
+  background: rgba(0, 171, 191, 0.03);
+  border-bottom: 1px solid rgba(0, 171, 191, 0.08);
+}
+
+/* Cuerpo de sección en modo flat */
+.meta-section-flat-body {
+  padding: 22px 24px;
+}
+
+/* Badges de progreso de sección */
+.meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.meta-badge.complete {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.meta-badge.partial {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.meta-badge.empty {
+  background: rgba(144, 144, 160, 0.08);
+  color: #9090a0;
+  border: 1px solid rgba(144, 144, 160, 0.15);
+}
+
+@media (max-width: 768px) {
+  .meta-flat-layout {
+    padding: 16px;
+  }
+}
+/* ============================================================
+   BOTÓN GUARDAR
+   ============================================================ */
+.meta-save-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(0, 171, 191, 0.3);
+  background: linear-gradient(135deg, rgba(0, 171, 191, 0.06), rgba(0, 171, 191, 0.02));
+  color: #007a8a;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.meta-save-btn:hover {
+  background: rgba(0, 171, 191, 0.1);
+  border-color: rgba(0, 171, 191, 0.5);
+  transform: translateY(-1px);
+}
+
+.meta-save-btn:active {
+  transform: translateY(0);
+}

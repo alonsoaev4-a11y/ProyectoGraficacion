@@ -1,0 +1,52 @@
+/* src/styles/wizard.css */
+
+@keyframes wizardPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 4px rgba(0, 217, 255, 0.6),
+            0 0 20px 8px rgba(0, 217, 255, 0.4),
+            0 0 40px 12px rgba(0, 217, 255, 0.2);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 8px rgba(0, 217, 255, 0.8),
+            0 0 30px 12px rgba(0, 217, 255, 0.6),
+            0 0 60px 16px rgba(0, 217, 255, 0.3);
+    }
+}
+
+.wizard-trigger-btn {
+    @apply px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/50 rounded-lg text-cyan-400 hover:border-cyan-400 transition-all duration-200 flex items-center gap-2 text-sm font-medium;
+}
+
+.wizard-trigger-btn:hover {
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+}
+
+/* Asegurar que elementos target sean accesibles */
+[data-wizard-target],
+[data-wizard] {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos para elementos resaltados */
+.wizard-highlighted {
+    position: relative;
+    z-index: 41 !important;
+    /* Higher than overlay (40) */
+    pointer-events: auto;
+}
+
+.wizard-highlighted::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    border: 2px solid transparent;
+    pointer-events: none;
+    z-index: 42;
+}

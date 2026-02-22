@@ -1,0 +1,117 @@
+/* Dashboard Global Styles */
+.dashboard-main {
+    background:
+        linear-gradient(90deg, rgba(0, 171, 191, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(0, 171, 191, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-color: var(--bg-primary);
+    animation: gridMove 60s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+/* Glassmorphism Card */
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 171, 191, 0.1);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dashboard-card:hover {
+    border-color: rgba(0, 171, 191, 0.3);
+    box-shadow:
+        0 12px 48px rgba(0, 171, 191, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+/* Sidebar Styling */
+.dashboard-sidebar {
+    background: var(--bg-secondary);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation Item */
+.nav-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--accent-cyan);
+    opacity: 0;
+    transform: scaleY(0);
+    transition: all 0.2s ease;
+}
+
+.nav-item:hover::before,
+.nav-item.active::before {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, rgba(0, 171, 191, 0.1), transparent);
+}
+
+/* Header Gradient Text */
+.text-gradient-header {
+    background: linear-gradient(135deg, #00abbf 0%, #9d22e6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar - Cyberpunk Light */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 171, 191, 0.3);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 171, 191, 0.6);
+}
+
+/* List Card Hover Effects */
+.list-card {
+    transition: all 0.2s ease;
+    border-left: 4px solid transparent;
+}
+
+.list-card:hover {
+    border-left-color: rgba(0, 171, 191, 0.4);
+    background: rgba(0, 171, 191, 0.05);
+    transform: translateX(4px);
+}
+
+.list-card.active {
+    border-left-color: #00abbf;
+    background: rgba(0, 171, 191, 0.1);
+}
