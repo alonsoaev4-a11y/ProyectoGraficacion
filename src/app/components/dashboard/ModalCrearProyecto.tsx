@@ -1,7 +1,5 @@
 import { X, Folder, ShoppingCart, FileText, Info, Loader2 } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { useWizard } from '@/components/wizard/WizardProvider';
-import { WIZARD_CONFIGS } from '@/config/wizardSteps';
+import { useState } from 'react';
 
 interface ModalCrearProyectoProps {
   isOpen: boolean;
@@ -36,7 +34,6 @@ const stackOptions = [
 ];
 
 export function ModalCrearProyecto({ isOpen, onClose, onSubmit }: ModalCrearProyectoProps) {
-  const { loadModule } = useWizard();
   const [formData, setFormData] = useState<ProjectFormData>({
     name: '',
     description: '',
@@ -48,19 +45,6 @@ export function ModalCrearProyecto({ isOpen, onClose, onSubmit }: ModalCrearProy
 
   const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
   const [isLoading, setIsLoading] = useState(false);
-
-  // Wizard logic: Load "crearProyecto" when open, restore "dashboard" when closed
-  useEffect(() => {
-    if (isOpen) {
-      // Small delay to ensure DOM is ready
-      const timer = setTimeout(() => {
-        loadModule(WIZARD_CONFIGS.crearProyecto);
-      }, 100);
-      return () => clearTimeout(timer);
-    } else {
-      loadModule(WIZARD_CONFIGS.dashboard);
-    }
-  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -116,7 +100,7 @@ export function ModalCrearProyecto({ isOpen, onClose, onSubmit }: ModalCrearProy
       />
 
       {/* Modal */}
-      <div className="modal-crear-proyecto-content relative w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300 max-h-[90vh] overflow-y-auto">
+      <div className="relative w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300 max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="sticky top-0 z-10 relative bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600 p-6">
           <button
@@ -133,7 +117,7 @@ export function ModalCrearProyecto({ isOpen, onClose, onSubmit }: ModalCrearProy
         {/* Content */}
         <form onSubmit={handleSubmit} className="p-6 space-y-6">
           {/* Nombre del Proyecto */}
-          <div data-wizard-target="field-name">
+          <div>
             <label className="block text-sm font-semibold text-slate-700 mb-2">
               Nombre del proyecto <span className="text-red-500">*</span>
             </label>
@@ -156,7 +140,7 @@ export function ModalCrearProyecto({ isOpen, onClose, onSubmit }: ModalCrearProy
           </div>
 
           {/* Descripción */}
-          <div data-wizard-target="field-description">
+          <div>
             <label className="block text-sm font-semibold text-slate-700 mb-2">
               Descripción corta <span className="text-red-500">*</span>
             </label>
@@ -179,7 +163,7 @@ export function ModalCrearProyecto({ isOpen, onClose, onSubmit }: ModalCrearProy
           </div>
 
           {/* Tipo de Proyecto */}
-          <div data-wizard-target="field-type">
+          <div>
             <label className="block text-sm font-semibold text-slate-700 mb-2">
               Tipo de proyecto
             </label>
@@ -196,7 +180,7 @@ export function ModalCrearProyecto({ isOpen, onClose, onSubmit }: ModalCrearProy
           </div>
 
           {/* Plantilla */}
-          <div data-wizard-target="field-template">
+          <div>
             <label className="block text-sm font-semibold text-slate-700 mb-3">
               Plantilla
             </label>
@@ -250,7 +234,7 @@ export function ModalCrearProyecto({ isOpen, onClose, onSubmit }: ModalCrearProy
           </div>
 
           {/* Stack Preferido */}
-          <div data-wizard-target="field-stack">
+          <div>
             <label className="block text-sm font-semibold text-slate-700 mb-3">
               Stack preferido <span className="text-red-500">*</span>
             </label>
@@ -345,7 +329,6 @@ export function ModalCrearProyecto({ isOpen, onClose, onSubmit }: ModalCrearProy
             <button
               type="submit"
               disabled={isLoading}
-              data-wizard-target="btn-submit-project"
               className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all shadow-lg shadow-purple-500/30 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isLoading ? (

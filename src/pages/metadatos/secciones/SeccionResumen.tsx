@@ -1,151 +1,105 @@
-// Sección 8 — Resumen de Metadatos
-// Panel de solo lectura que consolida todo en tiempo real + botón Generar Proyecto
+import { MetadatosState, MetadatosAction, buildOutputJson } from '../metadatosReducer';
+import { useState } from 'react';
+import { Copy, Check } from 'lucide-react';
+import { toast } from 'sonner';
 
-import { MetadatosState, buildOutputJson, calcularProgresoSecciones } from '../metadatosReducer';
-import { JsonPreview } from '../components/JsonPreview';
-import { Download, CheckCircle, AlertCircle } from 'lucide-react';
+interface Props { state: MetadatosState; dispatch: React.Dispatch<MetadatosAction>; }
 
-interface Props {
-    state: MetadatosState;
-}
+export default function SeccionResumen({ state, dispatch }: Props) {
+  const [copied, setCopied] = useState(false);
+  const json = buildOutputJson(state);
+  const jsonStr = JSON.stringify(json, null, 2);
 
-// Mapeo de secciones para la lista de completitud
-const SECCIONES_INFO = [
-    { key: 'seccion1', label: 'Información General' },
-    { key: 'seccion2', label: 'Métodos de Levantamiento' },
-    { key: 'seccion3', label: 'Entrevista' },
-    { key: 'seccion4', label: 'Encuesta' },
-    { key: 'seccion5', label: 'Historias de Usuario' },
-    { key: 'seccion6', label: 'Observación' },
-    { key: 'seccion7', label: 'Análisis Documental' },
-] as const;
+  const handleCopy = () => {
+    navigator.clipboard.writeText(jsonStr);
+    setCopied(true);
+    toast.success('JSON copiado al portapapeles');
+    setTimeout(() => setCopied(false), 2000);
+  };
 
-export const SeccionResumen = ({ state }: Props) => {
-    // Construye el JSON de salida en tiempo real
-    const outputJson = buildOutputJson(state);
+  const completeness = [
+    { label: 'Nombre del proyecto', done: !!state.nombreProyecto },
+    { label: 'Descripción', done: !!state.descripcionProyecto },
+    { label: 'Al menos una entrevista', done: (state.entrevistas?.length || 0) > 0 },
+    { label: 'Hallazgos de entrevistas', done: !!state.hallazgosEntrevista },
+    { label: 'Historias de usuario', done: (state.historias?.length || 0) > 0 },
+    { label: 'Resumen consolidado', done: !!state.resumenConsolidado },
+  ];
+  const progress = Math.round((completeness.filter(c => c.done).length / completeness.length) * 100);
 
-    // Calcula el progreso de todas las secciones
-    const progreso = calcularProgresoSecciones(state);
+  return (
+    <div>
+      <div className="module-header">
+        <h2>Resumen y Exportación</h2>
+        <p>Vista de completitud de los metadatos y JSON generado listo para el pipeline de IA</p>
+      </div>
 
-    // Cuenta secciones activas (filtradas por metodosActivos)
-    const { metodosActivos } = state;
-    const seccionesAplicables = [
-        progreso.seccion1,  // siempre aplica
-        progreso.seccion2,  // siempre aplica
-        metodosActivos.includes('entrevista') ? progreso.seccion3 : null,
-        metodosActivos.includes('encuesta') ? progreso.seccion4 : null,
-        metodosActivos.includes('historiasDeUsuario') ? progreso.seccion5 : null,
-        metodosActivos.includes('observacion') ? progreso.seccion6 : null,
-        metodosActivos.includes('analisisDocumental') ? progreso.seccion7 : null,
-    ].filter(s => s !== null) as (0 | 1 | 2)[];
-
-    const totalAplicables = seccionesAplicables.length;
-    const completadas = seccionesAplicables.filter(s => s === 2).length;
-    const porcentaje = totalAplicables > 0 ? Math.round((completadas / totalAplicables) * 100) : 0;
-
-    // Descarga el JSON como archivo .json en el navegador
-    const handleExportarJson = () => {
-        const json = JSON.stringify(outputJson, null, 2);
-        const blob = new Blob([json], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `metadatos-${state.proyecto.nombre.replace(/\s+/g, '-').toLowerCase() || 'proyecto'}.json`;
-        a.click();
-        URL.revokeObjectURL(url);
-    };
-
-    return (
-        <div>
-            {/* Indicador de completitud */}
-            <div className="cyber-card" style={{ padding: '18px', marginBottom: '20px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
-                    <span style={{ fontSize: '0.9rem', fontWeight: '700', color: '#1a1a2e' }}>
-                        Completitud del formulario
-                    </span>
-                    <span style={{ fontSize: '0.85rem', fontWeight: '600', color: '#00abbf' }}>
-                        {completadas} de {totalAplicables} secciones completas
-                    </span>
-                </div>
-                <div className="meta-progreso-bar">
-                    <div
-                        className="meta-progreso-fill"
-                        style={{ width: `${porcentaje}%` }}
-                    />
-                </div>
-                <p style={{ margin: '8px 0 0', fontSize: '0.77rem', color: '#9090a0' }}>
-                    {porcentaje}% completado
-                </p>
-
-                {/* Lista de secciones con estado */}
-                <div style={{ marginTop: '14px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                    {SECCIONES_INFO.map(sec => {
-                        const estado = progreso[sec.key];
-                        const esAplicable =
-                            sec.key === 'seccion1' || sec.key === 'seccion2' ||
-                            (sec.key === 'seccion3' && metodosActivos.includes('entrevista')) ||
-                            (sec.key === 'seccion4' && metodosActivos.includes('encuesta')) ||
-                            (sec.key === 'seccion5' && metodosActivos.includes('historiasDeUsuario')) ||
-                            (sec.key === 'seccion6' && metodosActivos.includes('observacion')) ||
-                            (sec.key === 'seccion7' && metodosActivos.includes('analisisDocumental'));
-
-                        if (!esAplicable) return null;
-
-                        const color = estado === 2 ? '#10b981' : estado === 1 ? '#f59e0b' : '#9090a0';
-                        const Icono = estado === 2 ? CheckCircle : AlertCircle;
-
-                        return (
-                            <div
-                                key={sec.key}
-                                style={{
-                                    display: 'flex', alignItems: 'center', gap: '5px',
-                                    fontSize: '0.78rem', color,
-                                    padding: '4px 10px', borderRadius: '12px',
-                                    background: `${color}12`, border: `1px solid ${color}30`,
-                                }}
-                            >
-                                <Icono size={13} />
-                                {sec.label}
-                            </div>
-                        );
-                    })}
-                </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', maxWidth: '900px' }}>
+        {/* Completitud */}
+        <div className="cyber-card" style={{ padding: '1.25rem' }}>
+          <div style={{ fontWeight: 600, color: '#111827', marginBottom: '1rem' }}>Completitud de metadatos</div>
+          
+          <div style={{ marginBottom: '1rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.875rem', marginBottom: '0.375rem' }}>
+              <span style={{ color: '#6b7280' }}>Progreso</span>
+              <span style={{ fontWeight: 700, color: progress === 100 ? '#10b981' : '#00abbf' }}>{progress}%</span>
             </div>
+            <div className="cyber-progress-bar">
+              <div className="cyber-progress-fill" style={{ width: `${progress}%` }} />
+            </div>
+          </div>
 
-            {/* Botón Exportar JSON — descarga real del archivo */}
-            <div style={{ marginBottom: '24px' }}>
-                <button
-                    type="button"
-                    onClick={handleExportarJson}
-                    className="cyber-btn-primary"
-                    style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', padding: '11px 24px' }}
-                >
-                    <Download size={17} />
-                    Exportar JSON
-                </button>
-                <div style={{
-                    display: 'flex', alignItems: 'center', gap: '8px',
-                    marginTop: '10px', padding: '8px 12px', borderRadius: '8px',
-                    background: 'rgba(245,158,11,0.06)', border: '1px solid rgba(245,158,11,0.2)',
-                    maxWidth: '420px',
-                }}>
-                    <span style={{ fontSize: '0.78rem', color: '#92400e' }}>
-                        ⚠️ La <strong>generación automática de código</strong> estará disponible cuando el backend esté listo.
-                        Por ahora puedes exportar el JSON y usarlo manualmente.
-                    </span>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            {completeness.map((c, i) => (
+              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem' }}>
+                <div style={{ width: '1.25rem', height: '1.25rem', borderRadius: '50%', background: c.done ? '#10b981' : '#e5e7eb', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  {c.done && <Check size={10} style={{ color: '#fff' }} />}
                 </div>
-            </div>
+                <span style={{ color: c.done ? '#374151' : '#9ca3af' }}>{c.label}</span>
+              </div>
+            ))}
+          </div>
 
-            {/* Vista previa del JSON */}
-            <div>
-                <h3 style={{ fontSize: '0.9rem', fontWeight: '700', color: '#1a1a2e', marginBottom: '12px' }}>
-                    JSON de metadatos generado
-                </h3>
-                <JsonPreview
-                    data={outputJson}
-                    filename={`proyecto-${state.proyecto.nombre.replace(/\s+/g, '-').toLowerCase() || 'sin-nombre'}`}
-                />
+          {progress === 100 && (
+            <div style={{ marginTop: '1rem', padding: '0.75rem', background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: '0.5rem', fontSize: '0.8125rem', color: '#10b981', fontWeight: 600 }}>
+              ✓ Metadatos completos — listos para el pipeline IA
             </div>
+          )}
         </div>
-    );
-};
+
+        {/* JSON Preview */}
+        <div className="cyber-card" style={{ padding: '1.25rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
+            <div style={{ fontWeight: 600, color: '#111827' }}>JSON de metadatos</div>
+            <button className="cyber-btn cyber-btn-ghost cyber-btn-sm" onClick={handleCopy}>
+              {copied ? <><Check size={13} /> Copiado</> : <><Copy size={13} /> Copiar</>}
+            </button>
+          </div>
+          <pre style={{
+            background: '#0f0f1a', color: '#a5f3fc', borderRadius: '0.5rem', padding: '0.875rem',
+            fontSize: '0.75rem', overflow: 'auto', maxHeight: '340px', lineHeight: 1.6,
+          }}>
+            {jsonStr}
+          </pre>
+        </div>
+      </div>
+
+      {/* Stats */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '0.875rem', marginTop: '1.5rem', maxWidth: '900px' }}>
+        {[
+          { label: 'Entrevistas', value: state.entrevistas?.length || 0, color: '#00abbf' },
+          { label: 'Encuestas', value: state.encuestas?.length || 0, color: '#9d22e6' },
+          { label: 'Historias', value: state.historias?.length || 0, color: '#e91e8c' },
+          { label: 'Observaciones', value: state.sesionesObservacion?.length || 0, color: '#f59e0b' },
+        ].map((s, i) => (
+          <div key={i} className="stat-card">
+            <div>
+              <div style={{ fontSize: '1.75rem', fontWeight: 700, color: s.color }}>{s.value}</div>
+              <div style={{ fontSize: '0.8125rem', color: '#6b7280' }}>{s.label}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

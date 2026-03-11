@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useWizard } from '@/components/wizard/WizardProvider';
-import { WIZARD_CONFIGS } from '@/config/wizardSteps';
+import { useState } from 'react';
 import {
   Settings,
   Users,
@@ -10,8 +8,12 @@ import {
   Plus,
   Mail,
   Trash2,
+  Edit2,
+  Check,
+  X,
   Github,
   GitBranch,
+  Key,
   Bell,
   Clock,
   UserCheck,
@@ -47,7 +49,6 @@ const auditLogs: AuditLog[] = [
 ];
 
 export function PanelConfiguracion() {
-  const { loadModule } = useWizard();
   const [activeTab, setActiveTab] = useState<'project' | 'users' | 'integrations' | 'security' | 'language'>('project');
   const [users, setUsers] = useState<User[]>(mockUsers);
   const [showInviteModal, setShowInviteModal] = useState(false);
@@ -55,10 +56,6 @@ export function PanelConfiguracion() {
   const [inviteRole, setInviteRole] = useState<'Editor' | 'Viewer'>('Viewer');
   const [projectName, setProjectName] = useState('Sistema de Gestión Escolar');
   const [projectLanguage, setProjectLanguage] = useState('es');
-
-  useEffect(() => {
-    loadModule(WIZARD_CONFIGS.configuracion);
-  }, []);
 
   const handleInviteUser = () => {
     if (inviteEmail) {
@@ -112,7 +109,7 @@ export function PanelConfiguracion() {
       </div>
 
       {/* Tabs */}
-      <div className="bg-white border-b border-slate-200 px-6" data-wizard-target="conf-tabs">
+      <div className="bg-white border-b border-slate-200 px-6">
         <div className="flex gap-1">
           {tabs.map((tab) => {
             const Icon = tab.icon;
@@ -121,8 +118,8 @@ export function PanelConfiguracion() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex items-center gap-2 px-4 py-3 border-b-2 transition-all ${activeTab === tab.id
-                  ? 'border-purple-600 text-purple-600 font-semibold'
-                  : 'border-transparent text-slate-600 hover:text-slate-900'
+                    ? 'border-purple-600 text-purple-600 font-semibold'
+                    : 'border-transparent text-slate-600 hover:text-slate-900'
                   }`}
               >
                 <Icon size={18} />
@@ -139,7 +136,7 @@ export function PanelConfiguracion() {
           {/* Project Tab */}
           {activeTab === 'project' && (
             <div className="space-y-6">
-              <div className="bg-white rounded-xl border border-slate-200 p-6" data-wizard-target="conf-proyecto">
+              <div className="bg-white rounded-xl border border-slate-200 p-6">
                 <h3 className="text-lg font-semibold text-slate-900 mb-4">Información del Proyecto</h3>
                 <div className="space-y-4">
                   <div>
@@ -170,7 +167,7 @@ export function PanelConfiguracion() {
                 </div>
               </div>
 
-              <div className="bg-red-50 rounded-xl border border-red-200 p-6" data-wizard-target="conf-peligro">
+              <div className="bg-red-50 rounded-xl border border-red-200 p-6">
                 <h3 className="text-lg font-semibold text-red-900 mb-2">Zona de Peligro</h3>
                 <p className="text-sm text-red-700 mb-4">Las siguientes acciones son irreversibles</p>
                 <button className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all">

@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { createPortal } from 'react-dom';
+import { useState, useEffect } from 'react';
 import {
   X,
   FileText,
@@ -18,7 +17,7 @@ import {
   Play,
   ChevronRight,
   Clock,
-  ClipboardList,
+  Database,
 } from 'lucide-react';
 import { EditorRequisitos, Requirement } from '../acciones/requisitos/EditorRequisitos';
 import { EditorCasosUso } from '../acciones/casos-uso/EditorCasosUso';
@@ -28,7 +27,9 @@ import { ModeladorDatos, Table, Relationship } from '../acciones/modelado/Modela
 import { GeneradorCodigo } from '../acciones/generacion/GeneradorCodigo';
 import { PanelConfiguracion } from '../acciones/configuracion/PanelConfiguracion';
 import { RegistroAuditoria } from '../acciones/auditoria/RegistroAuditoria';
-import { MetadatosPage } from '@/pages/metadatos/MetadatosPage';
+import MetadatosPage from '../../../pages/metadatos/MetadatosPage';
+import { requirementsApi, useCasesApi, metadataApi } from '../../../lib/api';
+import { toast } from 'sonner';
 
 interface DetalleProyectoProps {
   project: any;
@@ -37,7 +38,7 @@ interface DetalleProyectoProps {
 
 const menuItems = [
   { id: 'resumen', label: 'Resumen', icon: Target },
-  { id: 'metadatos', label: 'Metadatos', icon: ClipboardList },
+  { id: 'metadatos', label: 'Metadatos', icon: Database },
   { id: 'requisitos', label: 'Requisitos', icon: FileText },
   { id: 'casos-de-uso', label: 'Casos de Uso', icon: Users },
   { id: 'flujos', label: 'Flujos', icon: Workflow },
@@ -47,101 +48,15 @@ const menuItems = [
   { id: 'configuracion', label: 'Configuración', icon: Settings },
 ];
 
-// Sub-pasos del módulo de metadatos para el sidebar
-const META_STEPS: { id: string; numero: number; label: string; siempre?: boolean; metodo?: string }[] = [
-  { id: 'meta-s1', numero: 1, label: 'Info General', siempre: true },
-  { id: 'meta-s2', numero: 2, label: 'Métodos', siempre: true },
-  { id: 'meta-s3', numero: 3, label: 'Entrevista', metodo: 'entrevista' },
-  { id: 'meta-s4', numero: 4, label: 'Encuesta', metodo: 'encuesta' },
-  { id: 'meta-s5', numero: 5, label: 'Historias Usuario', metodo: 'historiasDeUsuario' },
-  { id: 'meta-s6', numero: 6, label: 'Observación', metodo: 'observacion' },
-  { id: 'meta-s7', numero: 7, label: 'Análisis Doc.', metodo: 'analisisDocumental' },
-  { id: 'meta-s8', numero: 8, label: 'Resumen JSON', siempre: true },
-];
-
 export function DetalleProyecto({ project, onClose }: DetalleProyectoProps) {
   const [activeTab, setActiveTab] = useState('resumen');
   const [isEditingName, setIsEditingName] = useState(false);
   const [projectName, setProjectName] = useState(project.name);
   const [showGenerateModal, setShowGenerateModal] = useState(false);
-  // Estado sincronizado desde MetadatosPage — qué métodos están activos
-  const [metodosActivos, setMetodosActivos] = useState<string[]>([]);
 
-  // Lifted State
-  const [requirements, setRequirements] = useState<Requirement[]>([
-    {
-      id: '1',
-      code: 'REQ-001',
-      title: 'Registro de Alumnos',
-      description: 'El sistema debe permitir registrar nuevos alumnos con sus datos personales y de contacto.',
-      type: 'funcional',
-      priority: 'alta',
-      status: 'aprobado',
-      acceptanceCriteria: ['Validar campos obligatorios', 'Email único en el sistema', 'Generar matrícula automáticamente'],
-      dependencies: [],
-      comments: [],
-      createdAt: '15 Feb 2026',
-      updatedAt: '15 Feb 2026'
-    },
-    {
-      id: '2',
-      code: 'REQ-002',
-      title: 'Gestión de Cursos',
-      description: 'Los administradores deben poder crear, editar y eliminar cursos académicos.',
-      type: 'funcional',
-      priority: 'alta',
-      status: 'aprobado',
-      acceptanceCriteria: ['Nombre de curso único', 'Asignar profesor titular', 'Definir cupo máximo'],
-      dependencies: [],
-      comments: [],
-      createdAt: '15 Feb 2026',
-      updatedAt: '15 Feb 2026'
-    },
-    {
-      id: '3',
-      code: 'REQ-003',
-      title: 'Historial Académico',
-      description: 'Consultar el historial de calificaciones y asistencias de un alumno.',
-      type: 'funcional',
-      priority: 'media',
-      status: 'pendiente',
-      acceptanceCriteria: ['Ver promedio general', 'Exportar a PDF'],
-      dependencies: ['REQ-001', 'REQ-002'],
-      comments: [],
-      createdAt: '15 Feb 2026',
-      updatedAt: '15 Feb 2026'
-    },
-    {
-      id: '4',
-      code: 'SEG-001',
-      title: 'Autenticación Segura',
-      description: 'El acceso al sistema debe requerir autenticación de dos factores para administradores.',
-      type: 'no-funcional',
-      priority: 'alta',
-      status: 'pendiente',
-      acceptanceCriteria: ['Contraseñas encriptadas', 'Token de sesión expira en 30min'],
-      dependencies: [],
-      comments: [],
-      createdAt: '15 Feb 2026',
-      updatedAt: '15 Feb 2026'
-    },
-    {
-      id: '5',
-      code: 'REP-001',
-      title: 'Reporte de Inscripciones',
-      description: 'Generar reportes mensuales de alumnos inscritos por curso.',
-      type: 'funcional',
-      priority: 'baja',
-      status: 'pendiente',
-      acceptanceCriteria: ['Filtros por fecha y curso', 'Formato Excel y PDF'],
-      dependencies: ['REQ-002'],
-      comments: [],
-      createdAt: '15 Feb 2026',
-      updatedAt: '15 Feb 2026'
-    }
-  ]);
-
-  // --- Catalog State ---
+  const [requirements, setRequirements] = useState<any[]>([]);
+  const [useCases, setUseCases] = useState<UseCase[]>([]);
+  const [metadatos, setMetadatos] = useState<any>(null);
   const [catalogs, setCatalogs] = useState<{
     roles: any[];
     actors: any[];
@@ -150,119 +65,70 @@ export function DetalleProyecto({ project, onClose }: DetalleProyectoProps) {
     postconditions: any[];
     exceptions: any[];
   }>({
-    roles: [
-      { id: 'role1', name: 'Secretaria', code: 'SECRETARIA', description: 'Personal administrativo', isSystem: false },
-      { id: 'role2', name: 'Alumno', code: 'ALUMNO', description: 'Estudiante registrado', isSystem: false },
-      { id: 'role3', name: 'Sistema', code: 'SISTEMA', description: 'El propio sistema', isSystem: true },
-      { id: 'role4', name: 'Administrador', code: 'ADMIN', description: 'Acceso total', isSystem: false },
-    ],
-    actors: [], // Valid but empty, we use Roles now
-    businessRules: [
-      { id: 'rn1', code: 'RN-01', description: 'Un alumno no puede estar inscrito en más de 5 cursos simultáneos', isActive: true },
-      { id: 'rn2', code: 'RN-02', description: 'No se permiten horarios traslapados entre cursos', isActive: true },
-      { id: 'rn3', code: 'RN-03', description: 'El alumno debe tener estado "Activo" para inscribirse', isActive: true },
-    ],
-    preconditions: [
-      { id: 'pre1', description: 'El usuario debe estar autenticado en el sistema' },
-      { id: 'pre2', description: 'El alumno debe estar registrado previamente' },
-      { id: 'pre3', description: 'El curso debe tener cupo disponible' },
-    ],
-    postconditions: [
-      { id: 'post1', description: 'El registro queda guardado en la base de datos' },
-      { id: 'post2', description: 'Se envía una notificación de confirmación al usuario' },
-      { id: 'post3', description: 'Se actualiza el cupo disponible del curso' },
-    ],
-    exceptions: [
-      { id: 'ex1', description: 'Fallo de conexión con la base de datos' },
-      { id: 'ex2', description: 'Datos inválidos o incompletos' },
-    ],
+    roles: [], actors: [], businessRules: [], preconditions: [], postconditions: [], exceptions: []
   });
+  const [isLoadingData, setIsLoadingData] = useState(false);
 
-  const [useCases, setUseCases] = useState<UseCase[]>([
-    {
-      id: '1',
-      code: 'CU-01',
-      title: 'Inscribir alumno en curso',
-      description: 'Permitir que la secretaria registre la inscripción de un alumno en un curso disponible.',
-      type: 'Esencial',
-      priority: 'alta',
-      status: 'draft',
-      actors: [
-        {
-          id: 'act1',
-          roleId: 'role1',
-          name: 'Secretaria',
-          role: 'primary',
-          participationType: 'initiator',
-          accessScope: 'department',
-          crudImpact: { create: true, read: true, update: false, delete: false, execute: false }
-        },
-        {
-          id: 'act3',
-          roleId: 'role3',
-          name: 'Sistema',
-          role: 'system',
-          participationType: 'receiver',
-          accessScope: 'global',
-          crudImpact: { create: false, read: true, update: true, delete: false, execute: true }
-        },
-        {
-          id: 'act2',
-          roleId: 'role2',
-          name: 'Alumno',
-          role: 'secondary',
-          participationType: 'secondary',
-          accessScope: 'own',
-          crudImpact: { create: false, read: true, update: false, delete: false, execute: false }
-        }
-      ],
-      preconditions: [
-        { id: 'pre1', description: 'El usuario debe estar autenticado en el sistema' },
-        { id: 'pre2', description: 'El alumno debe estar registrado previamente' },
-        { id: 'pre3', description: 'El curso debe tener cupo disponible' },
-      ],
-      postconditions: [
-        { id: 'post1', description: 'El registro queda guardado en la base de datos' },
-        { id: 'post2', description: 'Se envía una notificación de confirmación al usuario' },
-        { id: 'post3', description: 'Se actualiza el cupo disponible del curso' },
-      ],
-      businessRules: [
-        { id: 'rn1', code: 'RN-01', description: 'Un alumno no puede estar inscrito en más de 5 cursos simultáneos', isActive: true },
-        { id: 'rn2', code: 'RN-02', description: 'No se permiten horarios traslapados entre cursos', isActive: true },
-      ],
-      steps: [
-        { id: '1', order: 1, actorId: 'act1', action: 'Solicita matrícula del alumno' },
-        { id: '2', order: 2, actorId: 'act3', action: 'Valida existencia del alumno y muestra datos' },
-        { id: '3', order: 3, actorId: 'act1', action: 'Selecciona el curso a inscribir' },
-        { id: '4', order: 4, actorId: 'act3', action: 'Verifica disponibilidad de cupo y horarios' },
-        { id: '5', order: 5, actorId: 'act3', action: 'Registra la inscripción y genera comprobante' },
-        { id: '6', order: 6, actorId: 'act1', action: 'Entrega comprobante al alumno' }
-      ],
-      alternativeFlows: [
-        {
-          id: 'alt1',
-          code: 'A1',
-          title: 'Alumno no encontrado',
-          steps: [
-            { id: 'a1-1', order: 1, actorId: 'act3', action: 'Muestra mensaje de error: "Alumno no registrado"' },
-            { id: 'a1-2', order: 2, actorId: 'act1', action: 'Cancela la operación o procede a registrar al alumno' }
-          ]
-        },
-        {
-          id: 'alt2',
-          code: 'A2',
-          title: 'Curso sin cupo',
-          steps: [
-            { id: 'a2-1', order: 1, actorId: 'act3', action: 'Notifica que el curso seleccionado no tiene plazas disponibles' },
-            { id: 'a2-2', order: 2, actorId: 'act1', action: 'Selecciona otro curso o termina el caso de uso' }
-          ]
-        }
-      ],
-      exceptions: [
-        { id: 'ex1', description: 'Fallo de conexión con la base de datos' }
-      ],
+  // Cargar datos reales al abrir el proyecto
+  useEffect(() => {
+    if (project?.id) {
+      loadProjectData(project.id);
     }
-  ]);
+  }, [project?.id]);
+
+  const loadProjectData = async (projectId: number) => {
+    setIsLoadingData(true);
+    try {
+      const [reqs, ucs, meta] = await Promise.all([
+        requirementsApi.list(projectId),
+        useCasesApi.list(projectId),
+        metadataApi.get(projectId)
+      ]);
+      setRequirements(reqs);
+      if (meta) setMetadatos(meta);
+      
+      // Mapear el UseCaseOut del backend al formato que espera el EditorCasosUso
+      const mappedUcs: UseCase[] = ucs.map((u: any) => ({
+        id: u.id.toString(),
+        code: `CU-${u.id}`,
+        title: u.title,
+        description: u.description || '',
+        type: 'Esencial',
+        priority: 'media',
+        status: 'draft',
+        actors: [],
+        preconditions: Array.isArray(u.preconditions) ? u.preconditions : [],
+        postconditions: Array.isArray(u.postconditions) ? u.postconditions : [],
+        businessRules: [],
+        steps: u.snapshot?.steps || [],
+        alternativeFlows: u.snapshot?.alternativeFlows || [],
+        exceptions: u.snapshot?.exceptions || []
+      }));
+      setUseCases(mappedUcs);
+      
+      // Si el snapshot trae catálogos, los ponemos
+      const firstUcWithCatalogs = ucs.find((u: any) => u.snapshot?.catalogs);
+      if (firstUcWithCatalogs) {
+          setCatalogs((firstUcWithCatalogs as any).snapshot.catalogs);
+      }
+      
+    } catch (error) {
+       toast.error('Error al cargar datos del proyecto');
+    } finally {
+       setIsLoadingData(false);
+    }
+  };
+
+  const handleUpdateMetadata = async (data: any) => {
+    try {
+      if (project?.id) {
+        await metadataApi.upsert(project.id, data);
+        toast.success('Metadatos guardados automáticamente');
+      }
+    } catch (e) {
+      toast.error('Error al guardar los metadatos');
+    }
+  };
 
   const [tables, setTables] = useState<Table[]>([
     {
@@ -331,9 +197,8 @@ export function DetalleProyecto({ project, onClose }: DetalleProyectoProps) {
     setRelationships(newRelationships);
   };
 
-
-  return createPortal(
-    <div className="fixed inset-0 z-[100] bg-white">
+  return (
+    <div className="fixed inset-0 z-50 bg-white">
       {/* Header */}
       <div className="sticky top-0 z-20 bg-white border-b border-slate-200">
         <div className="px-6 py-4">
@@ -414,65 +279,17 @@ export function DetalleProyecto({ project, onClose }: DetalleProyectoProps) {
               const Icon = item.icon;
               const isActive = activeTab === item.id;
               return (
-                <div key={item.id}>
-                  <button
-                    onClick={() => setActiveTab(item.id)}
-                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${isActive
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/20'
-                      : 'text-slate-700 hover:bg-white hover:shadow-sm'
-                      }`}
-                  >
-                    <Icon size={20} />
-                    <span className="font-medium">{item.label}</span>
-                  </button>
-
-                  {/* Sub-pasos de Metadatos — visibles solo cuando Metadatos está activo */}
-                  {item.id === 'metadatos' && isActive && (
-                    <div style={{ marginTop: '4px', marginLeft: '8px', borderLeft: '2px solid rgba(139,92,246,0.2)', paddingLeft: '8px' }}>
-                      {META_STEPS.map(step => {
-                        // Ocultar pasos de método si el método no está activo
-                        const visible = step.siempre || metodosActivos.includes(step.metodo ?? '');
-                        if (!visible) return null;
-                        return (
-                          <button
-                            key={step.id}
-                            onClick={() => {
-                              const el = document.getElementById(step.id);
-                              el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }}
-                            style={{
-                              width: '100%',
-                              display: 'flex',
-                              alignItems: 'center',
-                              gap: '8px',
-                              padding: '6px 10px',
-                              borderRadius: '8px',
-                              background: 'none',
-                              border: 'none',
-                              cursor: 'pointer',
-                              fontSize: '0.78rem',
-                              color: '#64748b',
-                              textAlign: 'left',
-                              transition: 'background 0.15s, color 0.15s',
-                            }}
-                            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(139,92,246,0.07)'; e.currentTarget.style.color = '#7c3aed'; }}
-                            onMouseLeave={e => { e.currentTarget.style.background = 'none'; e.currentTarget.style.color = '#64748b'; }}
-                          >
-                            <span style={{
-                              width: '20px', height: '20px', borderRadius: '5px', flexShrink: 0,
-                              background: 'linear-gradient(135deg,#8b5cf6,#06b6d4)',
-                              color: 'white', fontSize: '0.65rem', fontWeight: 700,
-                              display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            }}>
-                              {step.numero}
-                            </span>
-                            {step.label}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
+                <button
+                  key={item.id}
+                  onClick={() => setActiveTab(item.id)}
+                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${isActive
+                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/20'
+                    : 'text-slate-700 hover:bg-white hover:shadow-sm'
+                    }`}
+                >
+                  <Icon size={20} />
+                  <span className="font-medium">{item.label}</span>
+                </button>
               );
             })}
           </nav>
@@ -480,8 +297,21 @@ export function DetalleProyecto({ project, onClose }: DetalleProyectoProps) {
 
         {/* Center Content */}
         <main className="flex-1 overflow-y-auto">
-          {activeTab === 'metadatos' ? (
-            <MetadatosPage project={project} onMetodosChange={setMetodosActivos} />
+          {activeTab === 'resumen' ? (
+            <div className="p-8 max-w-4xl mx-auto">
+               <h2 className="text-2xl font-bold mb-4">Resumen del Proyecto</h2>
+               {/* Contenido provisorio del resumen */}
+               <p className="text-slate-600">
+                 {project.description || 'No hay descripción disponible para este proyecto.'}
+               </p>
+            </div>
+          ) : activeTab === 'metadatos' ? (
+            <div className="flex-1 overflow-auto bg-[var(--bg-primary)] mt-12">
+            <MetadatosPage 
+              initialData={metadatos?.data} 
+              onDataChange={handleUpdateMetadata} 
+            />
+          </div>
           ) : activeTab === 'requisitos' ? (
             <EditorRequisitos requirements={requirements} onUpdate={handleUpdateRequirements} />
           ) : activeTab === 'casos-de-uso' ? (
@@ -497,6 +327,7 @@ export function DetalleProyecto({ project, onClose }: DetalleProyectoProps) {
             <ModeladorDatos tables={tables} relationships={relationships} onUpdate={handleUpdateDataModel} />
           ) : activeTab === 'generacion' ? (
             <GeneradorCodigo
+              projectId={project.id}
               requirements={requirements}
               useCases={useCases}
               tables={tables}
@@ -632,7 +463,7 @@ export function DetalleProyecto({ project, onClose }: DetalleProyectoProps) {
         </main>
 
         {/* Right Sidebar - Activity & Quick Actions (hide on special editor tabs) */}
-        {!['requisitos', 'casos-de-uso', 'flujos', 'modelado', 'generacion', 'configuracion', 'auditoria', 'metadatos'].includes(activeTab) && (
+        {!['requisitos', 'casos-de-uso', 'flujos', 'modelado', 'generacion', 'configuracion', 'auditoria'].includes(activeTab) && (
           <aside className="w-80 border-l border-slate-200 bg-slate-50 overflow-y-auto p-6">
             {/* Quick Actions */}
             <div className="mb-6">
@@ -731,7 +562,6 @@ export function DetalleProyecto({ project, onClose }: DetalleProyectoProps) {
           </div>
         </div>
       )}
-    </div>,
-    document.body
+    </div>
   );
 }

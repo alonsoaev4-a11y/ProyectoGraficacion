@@ -1,0 +1,72 @@
+INFO:     Started server process [28936]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63559 - "GET /openapi.json HTTP/1.1" 200 OK
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:     127.0.0.1:63565 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63570 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:63573 - "OPTIONS /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63576 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63581 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63583 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52933 - "OPTIONS /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52933 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52933 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52933 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52611 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52611 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55817 - "POST /api/projects HTTP/1.1" 201 Created
+INFO:     127.0.0.1:55817 - "OPTIONS /api/projects/1/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55817 - "GET /api/projects/1/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55817 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52372 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52372 - "GET /api/projects/1/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52372 - "OPTIONS /api/projects/1/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52372 - "GET /api/projects/1/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56452 - "POST /api/projects/1/members HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57698 - "GET /api/projects/1/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "OPTIONS /api/projects/1/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "GET /api/projects/1/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "OPTIONS /api/projects/1/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "GET /api/projects/1/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "OPTIONS /api/projects/1/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "GET /api/projects/1/diagrams/flujo HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57698 - "OPTIONS /api/projects/1/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "GET /api/projects/1/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "OPTIONS /api/projects/1/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "GET /api/projects/1/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "OPTIONS /api/projects/1/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/projects/1/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57698 - "OPTIONS /api/projects/1/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "GET /api/projects/1/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49217 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49217 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49217 - "GET /api/projects/1/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49217 - "GET /api/projects/1/diagrams/flujo HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58923 - "GET /api/projects/1/diagrams/flujo HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58923 - "GET /api/projects/1/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58923 - "GET /api/projects/1/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58923 - "POST /api/projects/1/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58923 - "GET /api/projects/1/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56905 - "GET /api/projects/1/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56905 - "GET /api/projects/1/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56905 - "GET /api/projects/1/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56905 - "POST /api/projects/1/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56905 - "GET /api/projects/1/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63239 - "OPTIONS /api/projects/1/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63239 - "GET /api/projects/1/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54408 - "GET /api/projects/1/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54408 - "GET /api/projects/1/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54408 - "GET /api/projects/1/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60064 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60064 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60064 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60064 - "GET /api/projects HTTP/1.1" 200 OK

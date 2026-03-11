@@ -17,7 +17,9 @@ import {
   RotateCcw,
   AlertTriangle,
   X,
+  Bot,
 } from 'lucide-react';
+import { PanelIA } from '../ia/PanelIA';
 
 interface GenerationConfig {
   framework: 'nextjs' | 'vite' | 'remix';
@@ -36,14 +38,17 @@ interface LogEntry {
 }
 
 interface GeneradorCodigoProps {
+  projectId: number;
   requirements: any[];
   useCases: any[];
   tables: any[];
   relationships: any[];
-  catalogs: any; // Added catalogs prop
+  catalogs: any;
 }
 
-export function GeneradorCodigo({ requirements, useCases, tables, relationships, catalogs }: GeneradorCodigoProps) {
+export function GeneradorCodigo({ projectId, requirements, useCases, tables, relationships, catalogs }: GeneradorCodigoProps) {
+  // Pestaña principal: 'simulacion' | 'pipeline-ia'
+  const [mainTab, setMainTab] = useState<'simulacion' | 'pipeline-ia'>('pipeline-ia');
   const [isGenerating, setIsGenerating] = useState(false);
   const [progress, setProgress] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
@@ -273,7 +278,49 @@ export function GeneradorCodigo({ requirements, useCases, tables, relationships,
 
   return (
     <div className="space-y-6">
-      {/* ... header ... */}
+
+      {/* ── Selector de modo ── */}
+      <div className="flex gap-1 p-1 bg-slate-100 rounded-xl w-fit">
+        <button
+          onClick={() => setMainTab('pipeline-ia')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+            mainTab === 'pipeline-ia'
+              ? 'bg-white shadow text-purple-700'
+              : 'text-slate-600 hover:text-slate-900'
+          }`}
+        >
+          <Bot size={16} />
+          Pipeline IA
+        </button>
+        <button
+          onClick={() => setMainTab('simulacion')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+            mainTab === 'simulacion'
+              ? 'bg-white shadow text-purple-700'
+              : 'text-slate-600 hover:text-slate-900'
+          }`}
+        >
+          <Terminal size={16} />
+          Simulación
+        </button>
+      </div>
+
+      {/* ── Panel IA real ── */}
+      {mainTab === 'pipeline-ia' && (
+        <div className="h-[calc(100vh-260px)] flex flex-col">
+          <PanelIA
+            projectId={projectId}
+            requirements={requirements}
+            useCases={useCases}
+            tables={tables}
+            catalogs={catalogs}
+          />
+        </div>
+      )}
+
+      {/* ── Simulación (mock anterior) ── */}
+      {mainTab === 'simulacion' && (
+      <>
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold text-slate-900">Generador de Código</h2>
@@ -760,6 +807,8 @@ export function GeneradorCodigo({ requirements, useCases, tables, relationships,
             </div>
           </div>
         </div>
+      )}
+      </>
       )}
     </div>
   );

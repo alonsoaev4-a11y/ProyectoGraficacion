@@ -9,7 +9,7 @@ const stats = [
         trend: '+2.5%',
         icon: Activity,
         progress: 75,
-        color: 'from-blue-400 to-cyan-400'
+        color: 'from-[#00ffff] to-[#00ff88]'
     },
     {
         id: 2,
@@ -18,7 +18,7 @@ const stats = [
         trend: '+15%',
         icon: Clock,
         progress: 60,
-        color: 'from-purple-400 to-pink-400'
+        color: 'from-[#9d22e6] to-[#ff003c]'
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const stats = [
         trend: '+5',
         icon: Database,
         progress: 45,
-        color: 'from-amber-400 to-orange-400'
+        color: 'from-[#ffaa00] to-[#ff003c]'
     },
     {
         id: 4,
@@ -36,7 +36,7 @@ const stats = [
         trend: '+12',
         icon: Server,
         progress: 90,
-        color: 'from-emerald-400 to-green-400'
+        color: 'from-[#00ff88] to-[#00ffff]'
     }
 ];
 
@@ -49,28 +49,28 @@ export const StatsCards = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="dashboard-card p-5 group cursor-pointer relative overflow-hidden"
+                    className="dashboard-card p-5 group cursor-pointer relative overflow-hidden bg-[rgba(10,10,18,0.6)] border border-[rgba(0,171,191,0.3)] shadow-[inset_0_0_15px_rgba(0,171,191,0.05)] hover:border-[#00ffff] hover:shadow-[0_0_20px_rgba(0,171,191,0.3)] transition-all duration-300"
                 >
                     <div className="flex items-center justify-between mb-4 relative z-10">
-                        <div className={`p-2 rounded-lg bg-gradient-to-br ${stat.color} bg-opacity-10 opacity-80 group-hover:opacity-100 transition-opacity`}>
-                            <stat.icon className="w-6 h-6 text-[var(--accent-cyan)]" />
+                        <div className={`p-2 rounded-lg bg-gradient-to-br ${stat.color} bg-opacity-10 opacity-80 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(0,171,191,0.2)]`}>
+                            <stat.icon className="w-6 h-6 text-[#e0e0e8]" style={{ filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.5))' }} />
                         </div>
-                        <span className="text-xs font-medium text-[var(--accent-cyan)] bg-[var(--accent-cyan)]/10 px-2 py-1 rounded">
+                        <span className="text-xs font-bold text-[#00ffff] bg-[rgba(0,171,191,0.1)] border border-[rgba(0,171,191,0.3)] px-2 py-1 rounded shadow-[inset_0_0_5px_rgba(0,171,191,0.2)]" style={{ textShadow: '0 0 5px rgba(0,171,191,0.5)' }}>
                             {stat.trend}
                         </span>
                     </div>
 
                     <div className="relative z-10">
-                        <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-1 group-hover:scale-105 transition-transform origin-left">
+                        <h3 className="text-2xl font-bold text-[#e0e0e8] mb-1 group-hover:scale-105 transition-transform origin-left" style={{ textShadow: '0 0 10px rgba(255,255,255,0.3)' }}>
                             {stat.value}
                         </h3>
-                        <p className="text-sm text-[var(--text-secondary)]">{stat.label}</p>
+                        <p className="text-sm text-[#a0a0b0]">{stat.label}</p>
                     </div>
 
                     {/* Progress Bar */}
-                    <div className="mt-4 h-1 bg-gray-200 rounded-full overflow-hidden relative z-10">
+                    <div className="mt-4 h-1 bg-[rgba(0,171,191,0.1)] rounded-full overflow-hidden relative z-10 border border-[rgba(0,171,191,0.2)]">
                         <motion.div
-                            className={`h-full bg-gradient-to-r ${stat.color}`}
+                            className={`h-full bg-gradient-to-r ${stat.color} shadow-[0_0_10px_rgba(0,171,191,0.5)]`}
                             initial={{ width: 0 }}
                             animate={{ width: `${stat.progress}%` }}
                             transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
@@ -78,7 +78,7 @@ export const StatsCards = () => {
                     </div>
 
                     {/* Background Glow Effect */}
-                    <div className={`absolute -right-4 -bottom-4 w-24 h-24 bg-gradient-to-br ${stat.color} opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-500`} />
+                    <div className={`absolute -right-4 -bottom-4 w-24 h-24 bg-gradient-to-br ${stat.color} opacity-10 blur-2xl group-hover:opacity-30 transition-opacity duration-500`} />
                 </motion.div>
             ))}
         </div>

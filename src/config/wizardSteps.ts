@@ -716,5 +716,23 @@ export const WIZARD_CONFIGS: Record<string, WizardConfig> = {
                 position: 'right'
             }
         ]
+    },
+
+    // =====================================
+    // MÓDULO: GESTIÓN DE EQUIPOS
+    // =====================================
+    gestionEquipos: {
+        module: 'gestionEquipos',
+        autoStart: false,
+        steps: []
+    },
+
+    // =====================================
+    // MÓDULO: CREAR EQUIPO (MODAL)
+    // =====================================
+    crearEquipo: {
+        module: 'crearEquipo',
+        autoStart: true,
+        steps: []
     }
 };

@@ -1,0 +1,753 @@
+INFO:     Will watch for changes in these directories: ['C:\\Users\\Alons\\OneDrive\\Escritorio\\proyecto herman react\\backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [34104] using WatchFiles
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "C:\Python313\Lib\multiprocessing\process.py", line 313, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "C:\Python313\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    ~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\server.py", line 70, in serve
+    await self._serve(sockets)
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\server.py", line 77, in _serve
+    config.load()
+    ~~~~~~~~~~~^^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+                      ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "C:\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\main.py", line 50, in <module>
+    from .routers import ai as ai_router
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 114
+    ]
+    ^
+SyntaxError: unmatched ']'
+WARNING:  WatchFiles detected changes in 'app\routers\ai.py'. Reloading...
+INFO:     Started server process [18908]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:64654 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64654 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64654 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 57260) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:49860 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49860 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49860 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49860 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49860 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49860 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49860 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49860 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49860 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49860 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49860 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+AI pipeline error: Cannot call "send" once a close message has been sent.
+Traceback (most recent call last):
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\protocols\websockets\websockets_impl.py", line 331, in asgi_send
+    await self.send(data)  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\websockets\legacy\protocol.py", line 620, in send
+    await self.ensure_open()
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\websockets\legacy\protocol.py", line 921, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedOK: received 1001 (going away); then sent 1001 (going away)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 85, in send
+    await self._send(message)
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\protocols\websockets\websockets_impl.py", line 344, in asgi_send
+    raise ClientDisconnected from exc
+uvicorn.protocols.utils.ClientDisconnected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 165, in stream_openrouter
+    await websocket.send_json({"type": "token", "content": delta})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 175, in send_json
+    await self.send({"type": "websocket.send", "text": text})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 88, in send
+    raise WebSocketDisconnect(code=1006)
+starlette.websockets.WebSocketDisconnect
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 261, in ai_pipeline_ws
+    ai_response = await stream_openrouter(messages, websocket)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 171, in stream_openrouter
+    await websocket.send_json({"type": "error", "content": f"Error inesperado: {str(exc)[:200]}"})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 175, in send_json
+    await self.send({"type": "websocket.send", "text": text})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 97, in send
+    raise RuntimeError('Cannot call "send" once a close message has been sent.')
+RuntimeError: Cannot call "send" once a close message has been sent.
+INFO:     127.0.0.1:49860 - "PUT /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49860 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 63120) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     ('127.0.0.1', 57141) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:63916 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63916 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63916 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63916 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63916 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63916 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+AI pipeline error: Cannot call "send" once a close message has been sent.
+Traceback (most recent call last):
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\protocols\websockets\websockets_impl.py", line 331, in asgi_send
+    await self.send(data)  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\websockets\legacy\protocol.py", line 620, in send
+    await self.ensure_open()
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\websockets\legacy\protocol.py", line 921, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedOK: received 1005 (no status received [internal]); then sent 1005 (no status received [internal])
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 85, in send
+    await self._send(message)
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\protocols\websockets\websockets_impl.py", line 344, in asgi_send
+    raise ClientDisconnected from exc
+uvicorn.protocols.utils.ClientDisconnected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 165, in stream_openrouter
+    await websocket.send_json({"type": "token", "content": delta})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 175, in send_json
+    await self.send({"type": "websocket.send", "text": text})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 88, in send
+    raise WebSocketDisconnect(code=1006)
+starlette.websockets.WebSocketDisconnect
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 261, in ai_pipeline_ws
+    ai_response = await stream_openrouter(messages, websocket)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 171, in stream_openrouter
+    await websocket.send_json({"type": "error", "content": f"Error inesperado: {str(exc)[:200]}"})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 175, in send_json
+    await self.send({"type": "websocket.send", "text": text})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 97, in send
+    raise RuntimeError('Cannot call "send" once a close message has been sent.')
+RuntimeError: Cannot call "send" once a close message has been sent.
+WARNING:  WatchFiles detected changes in 'app\routers\ai.py'. Reloading...
+INFO:     127.0.0.1:57478 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57478 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57478 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57478 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "OPTIONS /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:55143 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "OPTIONS /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:55143 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55143 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53417 - "OPTIONS /api/projects/3/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53417 - "GET /api/projects/3/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 55947) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:56802 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52290 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54352 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55631 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51619 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51619 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51619 - "PUT /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51619 - "PUT /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51619 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:53750 - "GET /api/projects/3/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53750 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59124 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49668 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53385 - "PUT /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53385 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:53385 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52261 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52261 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52261 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52261 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "OPTIONS /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60981 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "OPTIONS /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60981 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60981 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     ('127.0.0.1', 58278) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:57581 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "OPTIONS /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50748 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50748 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50748 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50748 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50748 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50748 - "OPTIONS /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50748 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50748 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50748 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50748 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50748 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     ('127.0.0.1', 57460) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:56720 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56720 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56720 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56720 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "OPTIONS /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "PUT /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60991 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "OPTIONS /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60991 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60991 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50217 - "PUT /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 53443) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:63412 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63412 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63412 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63412 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63412 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63412 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63412 - "OPTIONS /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63412 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63412 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63412 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63412 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49371 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49371 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49371 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49371 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49371 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49371 - "OPTIONS /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49371 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49371 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49371 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49371 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 61262) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:56435 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56435 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56435 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56435 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56435 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56435 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56435 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56435 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56435 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56435 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56435 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 57035) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+AI pipeline error: Cannot call "send" once a close message has been sent.
+Traceback (most recent call last):
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\protocols\websockets\websockets_impl.py", line 331, in asgi_send
+    await self.send(data)  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\websockets\legacy\protocol.py", line 620, in send
+    await self.ensure_open()
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\websockets\legacy\protocol.py", line 921, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedOK: received 1001 (going away); then sent 1001 (going away)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 85, in send
+    await self._send(message)
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\protocols\websockets\websockets_impl.py", line 344, in asgi_send
+    raise ClientDisconnected from exc
+uvicorn.protocols.utils.ClientDisconnected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 165, in stream_openrouter
+    "interactive": False,
+                        ^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 175, in send_json
+    await self.send({"type": "websocket.send", "text": text})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 88, in send
+    raise WebSocketDisconnect(code=1006)
+starlette.websockets.WebSocketDisconnect
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 261, in ai_pipeline_ws
+    },
+    
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 171, in stream_openrouter
+    "Implementa el backend completo EXCLUSIVAMENTE con FastAPI y Python.\n\n"
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 175, in send_json
+    await self.send({"type": "websocket.send", "text": text})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 97, in send
+    raise RuntimeError('Cannot call "send" once a close message has been sent.')
+RuntimeError: Cannot call "send" once a close message has been sent.
+INFO:     connection closed
+AI pipeline error: Cannot call "send" once a close message has been sent.
+Traceback (most recent call last):
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\protocols\websockets\websockets_impl.py", line 331, in asgi_send
+    await self.send(data)  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\websockets\legacy\protocol.py", line 620, in send
+    await self.ensure_open()
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\websockets\legacy\protocol.py", line 921, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedOK: received 1005 (no status received [internal]); then sent 1005 (no status received [internal])
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 85, in send
+    await self._send(message)
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\uvicorn\protocols\websockets\websockets_impl.py", line 344, in asgi_send
+    raise ClientDisconnected from exc
+uvicorn.protocols.utils.ClientDisconnected
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 165, in stream_openrouter
+    "interactive": False,
+                        ^
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 175, in send_json
+    await self.send({"type": "websocket.send", "text": text})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 88, in send
+    raise WebSocketDisconnect(code=1006)
+starlette.websockets.WebSocketDisconnect
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 261, in ai_pipeline_ws
+    },
+    
+  File "C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\backend\app\routers\ai.py", line 171, in stream_openrouter
+    "Implementa el backend completo EXCLUSIVAMENTE con FastAPI y Python.\n\n"
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 175, in send_json
+    await self.send({"type": "websocket.send", "text": text})
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\starlette\websockets.py", line 97, in send
+    raise RuntimeError('Cannot call "send" once a close message has been sent.')
+RuntimeError: Cannot call "send" once a close message has been sent.
+INFO:     127.0.0.1:57017 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "OPTIONS /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61700 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61700 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61700 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61700 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61700 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61700 - "OPTIONS /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61700 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61700 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61700 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61700 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 55220) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:49386 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49386 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "PUT /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 52953) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMDk1NDE0fQ.VbBD3oN9VVg-U9OpHlcpf-qwfg3H9PK8hgWFUQMxjY0" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:58889 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58889 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58889 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59992 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61094 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53523 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61094 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50511 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50511 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50511 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50511 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49797 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49797 - "GET /api/auth/me HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:61246 - "OPTIONS /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61246 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Alons\AppData\Roaming\Python\Python313\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:     127.0.0.1:64558 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64558 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64558 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64558 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64558 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64558 - "OPTIONS /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64558 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64558 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64558 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64558 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51361 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51361 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51361 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51361 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51361 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51361 - "PUT /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49670 - "OPTIONS /api/projects/3/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49670 - "GET /api/projects/3/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62054 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62054 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62054 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62054 - "PUT /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62054 - "OPTIONS /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62054 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62054 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62054 - "PUT /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62054 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62054 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62054 - "GET /api/projects/3/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61812 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61812 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61812 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61812 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61812 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61812 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63487 - "OPTIONS /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63487 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63487 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63487 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63487 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62489 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62489 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62489 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62489 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62489 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62489 - "PUT /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62489 - "OPTIONS /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62489 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62489 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62489 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62489 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62638 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62638 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62638 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56457 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56457 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56457 - "PUT /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61252 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61252 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61252 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61252 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61252 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61252 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61252 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61252 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61252 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61252 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61252 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65336 - "PUT /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 49668) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 54474) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 59640) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 60704) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 54130) - "WebSocket /ws/ai/3/specs-to-code?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 49673) - "WebSocket /ws/ai/3/specs-to-code?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 59390) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 65500) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 58591) - "WebSocket /ws/ai/3/specs-to-code?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 49876) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     127.0.0.1:59304 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59304 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59304 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59304 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59304 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59304 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59304 - "OPTIONS /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59304 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59304 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59304 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59304 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51566 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51566 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51566 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51566 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51566 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51566 - "OPTIONS /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51566 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51566 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51566 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51566 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56819 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 53445) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     127.0.0.1:50675 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50675 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50675 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50675 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50675 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50675 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50675 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50675 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50675 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50675 - "PUT /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50675 - "OPTIONS /api/projects/3/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50675 - "GET /api/projects/3/audit-logs?page=1&limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54014 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54014 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54014 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 59520) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 63302) - "WebSocket /ws/ai/3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:55587 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55587 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55587 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55587 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55587 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55587 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:55587 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55587 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55587 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55587 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:55587 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 61136) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 51526) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 56169) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     127.0.0.1:50488 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50488 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50488 - "OPTIONS /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50488 - "GET /api/projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50488 - "OPTIONS /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50488 - "GET /api/projects/3/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50488 - "OPTIONS /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50488 - "GET /api/projects/3/requirements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50488 - "OPTIONS /api/projects/3/audit-logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:59890 - "OPTIONS /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "GET /api/projects/3/metadatos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "OPTIONS /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "GET /api/projects/3/use-cases HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "OPTIONS /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "GET /api/projects/3/diagrams/flujo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "OPTIONS /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "GET /api/projects/3/data-model HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "POST /api/projects/3/audit-logs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:59890 - "OPTIONS /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59890 - "GET /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52026 - "PUT /api/projects/3/generated-docs HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 54346) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 58507) - "WebSocket /ws/ai/3/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTkzMTkyfQ.zEvcrhfRKbenQ1xFTt18ow-tpQbRFW5g2y5HDo9n6og" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     127.0.0.1:58542 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58546 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 58552) - "WebSocket /ws/ai/999/spec-generator?token=invalid" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 58578) - "WebSocket /ws/ai/1/spec-generator?token=invalid" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 58580) - "WebSocket /ws/ai/1/ruta-que-no-existe?token=invalid" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 58582) - "WebSocket /ws/ai/1?token=invalid" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     127.0.0.1:58597 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58599 - "POST /auth/login HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58602 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 53906) - "WebSocket /ws/ai/1/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTEzOTUzfQ.mecOvvdoHcNtejo214r7htD0rUqWeOLzfZREmow-jjQ" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 53919) - "WebSocket /ws/ai/1?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTEzOTY1fQ.q9LNz3bC92dGr5XiTK7dxny0I5CJSGRxkEZW2VxtNfs" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     ('127.0.0.1', 53922) - "WebSocket /ws/ai/1/specs-to-code?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTEzOTY1fQ.q9LNz3bC92dGr5XiTK7dxny0I5CJSGRxkEZW2VxtNfs" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     ('127.0.0.1', 53924) - "WebSocket /ws/ai/1/spec-generator?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzczMTEzOTY1fQ.q9LNz3bC92dGr5XiTK7dxny0I5CJSGRxkEZW2VxtNfs" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed

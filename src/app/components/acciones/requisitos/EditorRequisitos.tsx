@@ -1,6 +1,7 @@
 import {
   Plus,
   Search,
+  Filter,
   Download,
   CheckCircle,
   Circle,
@@ -8,15 +9,14 @@ import {
   Trash2,
   Link as LinkIcon,
   AlertCircle,
+  ChevronDown,
   Save,
   X,
   GripVertical,
   FileCheck,
   MessageSquare
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { useWizard } from '@/components/wizard/WizardProvider';
-import { WIZARD_CONFIGS } from '@/config/wizardSteps';
+import { useState } from 'react';
 
 export interface Comment {
   id: string;
@@ -46,7 +46,6 @@ interface EditorRequisitosProps {
 }
 
 export function EditorRequisitos({ requirements, onUpdate }: EditorRequisitosProps) {
-  const { loadModule } = useWizard();
   const [selectedReq, setSelectedReq] = useState<Requirement | null>(requirements[0] || null);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState<string>('all');
@@ -56,18 +55,6 @@ export function EditorRequisitos({ requirements, onUpdate }: EditorRequisitosPro
   const [isEditing, setIsEditing] = useState(false);
   const [editedReq, setEditedReq] = useState<Requirement | null>(null);
   const [showNewReqModal, setShowNewReqModal] = useState(false);
-
-  // Wizard context switching for the modal
-  useEffect(() => {
-    if (showNewReqModal) {
-      const timer = setTimeout(() => {
-        loadModule(WIZARD_CONFIGS.modalNuevoRequisito);
-      }, 100);
-      return () => clearTimeout(timer);
-    } else {
-      loadModule(WIZARD_CONFIGS.requisitos);
-    }
-  }, [showNewReqModal]);
 
   // Filter requirements
   const filteredRequirements = requirements.filter((req) => {
@@ -597,7 +584,7 @@ export function EditorRequisitos({ requirements, onUpdate }: EditorRequisitosPro
             className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={() => setShowNewReqModal(false)}
           />
-          <div className="relative bg-white rounded-2xl shadow-2xl p-6 max-w-2xl w-full" data-wizard-target="modal-nuevo-requisito">
+          <div className="relative bg-white rounded-2xl shadow-2xl p-6 max-w-2xl w-full">
             <h3 className="text-xl font-bold text-slate-900 mb-4">Nuevo Requisito</h3>
             <form
               onSubmit={(e) => {
@@ -632,7 +619,6 @@ export function EditorRequisitos({ requirements, onUpdate }: EditorRequisitosPro
                   required
                   placeholder="Ej: Registrar Alumno"
                   className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-                  data-wizard-target="modal-req-titulo"
                 />
               </div>
 
@@ -646,7 +632,6 @@ export function EditorRequisitos({ requirements, onUpdate }: EditorRequisitosPro
                   rows={3}
                   placeholder="Describe el requisito..."
                   className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
-                  data-wizard-target="modal-req-descripcion"
                 />
               </div>
 
@@ -656,7 +641,6 @@ export function EditorRequisitos({ requirements, onUpdate }: EditorRequisitosPro
                   <select
                     name="type"
                     className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    data-wizard-target="modal-req-tipo"
                   >
                     <option value="funcional">Funcional</option>
                     <option value="no-funcional">No Funcional</option>
@@ -668,7 +652,6 @@ export function EditorRequisitos({ requirements, onUpdate }: EditorRequisitosPro
                   <select
                     name="priority"
                     className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    data-wizard-target="modal-req-prioridad"
                   >
                     <option value="alta">Alta</option>
                     <option value="media">Media</option>

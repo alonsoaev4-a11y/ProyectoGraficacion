@@ -1,131 +1,94 @@
-// Sección 1 — Información General del Proyecto
-// Recoge los datos básicos: nombre, descripción, tipo de sistema, dominio, equipo y fecha de inicio
+import { MetadatosState, MetadatosAction } from '../metadatosReducer';
 
-import { MetadatosAction, ProyectoState, TipoSistema, DominioNegocio } from '../metadatosReducer';
+interface Props { state: MetadatosState; dispatch: React.Dispatch<MetadatosAction>; }
 
-interface Props {
-    proyecto: ProyectoState;
-    dispatch: React.Dispatch<MetadatosAction>;
-}
+const TIPOS = ['Web', 'Mobile', 'Desktop', 'API', 'PWA', 'Microservicios'];
+const INDUSTRIAS = ['Fintech', 'Salud', 'Educación', 'Logística', 'E-commerce', 'Gobierno', 'Manufactura', 'Otro'];
+const PLATAFORMAS = ['Web', 'iOS', 'Android', 'Windows', 'macOS', 'Linux'];
 
-const TIPOS_SISTEMA: { value: TipoSistema; label: string }[] = [
-    { value: 'web', label: '🌐 Web' },
-    { value: 'movil', label: '📱 Móvil' },
-    { value: 'desktop', label: '🖥️ Desktop' },
-    { value: 'hibrido', label: '⚡ Híbrido' },
-];
+export default function SeccionInfoGeneral({ state, dispatch }: Props) {
+  const set = (field: keyof MetadatosState, value: any) => dispatch({ type: 'SET_FIELD', field, value });
 
-const DOMINIOS: { value: DominioNegocio; label: string }[] = [
-    { value: 'salud', label: 'Salud' },
-    { value: 'educacion', label: 'Educación' },
-    { value: 'finanzas', label: 'Finanzas' },
-    { value: 'logistica', label: 'Logística' },
-    { value: 'otro', label: 'Otro' },
-];
+  return (
+    <div>
+      <div className="module-header">
+        <h2>Información General</h2>
+        <p>Define el contexto básico del proyecto de software</p>
+      </div>
 
-export const SeccionInfoGeneral = ({ proyecto, dispatch }: Props) => {
-    // Actualiza un campo genérico del proyecto
-    const setField = (field: keyof ProyectoState, value: ProyectoState[keyof ProyectoState]) => {
-        dispatch({ type: 'SET_PROYECTO_FIELD', field, value });
-    };
-
-    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', maxWidth: '640px' }}>
         <div>
-            {/* Nombre */}
-            <div className="meta-field-group">
-                <label className="meta-field-label">Nombre del proyecto <span>*</span></label>
-                <input
-                    type="text"
-                    className="cyber-input"
-                    placeholder="ej. Sistema de Gestión de Inventario"
-                    value={proyecto.nombre}
-                    onChange={e => setField('nombre', e.target.value)}
-                />
-            </div>
-
-            {/* Descripción */}
-            <div className="meta-field-group">
-                <label className="meta-field-label">Descripción del sistema <span>*</span></label>
-                <textarea
-                    className="cyber-textarea"
-                    placeholder="¿Qué problema resuelve este software? Describe el objetivo principal del sistema a construir."
-                    rows={4}
-                    value={proyecto.descripcion}
-                    onChange={e => setField('descripcion', e.target.value)}
-                />
-            </div>
-
-            {/* Tipo de sistema */}
-            <div className="meta-field-group">
-                <label className="meta-field-label">Tipo de sistema</label>
-                <p style={{ fontSize: '0.77rem', color: '#9090a0', margin: '0 0 8px' }}>
-                    Selecciona uno o más tipos
-                </p>
-                <div className="meta-chips-group">
-                    {TIPOS_SISTEMA.map(tipo => (
-                        <button
-                            key={tipo.value}
-                            type="button"
-                            className={`meta-chip ${proyecto.tipoSistema.includes(tipo.value) ? 'selected' : ''}`}
-                            onClick={() => dispatch({ type: 'TOGGLE_TIPO_SISTEMA', value: tipo.value })}
-                        >
-                            {tipo.label}
-                        </button>
-                    ))}
-                </div>
-            </div>
-
-            {/* Dominio del negocio */}
-            <div className="meta-field-group">
-                <label className="meta-field-label">Dominio del negocio</label>
-                <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-                    <select
-                        className="cyber-select"
-                        style={{ flex: '1', minWidth: '160px' }}
-                        value={proyecto.dominio}
-                        onChange={e => setField('dominio', e.target.value as DominioNegocio)}
-                    >
-                        <option value="">Seleccionar dominio...</option>
-                        {DOMINIOS.map(d => (
-                            <option key={d.value} value={d.value}>{d.label}</option>
-                        ))}
-                    </select>
-                    {proyecto.dominio === 'otro' && (
-                        <input
-                            type="text"
-                            className="cyber-input"
-                            style={{ flex: '1', minWidth: '160px' }}
-                            placeholder="Especifica el dominio..."
-                            value={proyecto.dominioPersonalizado}
-                            onChange={e => setField('dominioPersonalizado', e.target.value)}
-                        />
-                    )}
-                </div>
-            </div>
-
-            {/* Equipo responsable */}
-            <div className="meta-field-group">
-                <label className="meta-field-label">Equipo responsable</label>
-                <input
-                    type="text"
-                    className="cyber-input"
-                    placeholder="ej. Equipo Backend, Squad Alpha, etc."
-                    value={proyecto.equipo}
-                    onChange={e => setField('equipo', e.target.value)}
-                />
-            </div>
-
-            {/* Fecha estimada de inicio */}
-            <div className="meta-field-group">
-                <label className="meta-field-label">Fecha estimada de inicio</label>
-                <input
-                    type="date"
-                    className="cyber-input"
-                    style={{ maxWidth: '220px' }}
-                    value={proyecto.fechaInicio}
-                    onChange={e => setField('fechaInicio', e.target.value)}
-                />
-            </div>
+          <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#374151', marginBottom: '0.375rem' }}>
+            Nombre del Proyecto *
+          </label>
+          <input
+            className="cyber-input"
+            placeholder="Ej. Sistema de Gestión Hospitalaria"
+            value={state.nombreProyecto}
+            onChange={e => set('nombreProyecto', e.target.value)}
+          />
         </div>
-    );
-};
+
+        <div>
+          <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#374151', marginBottom: '0.375rem' }}>
+            Descripción
+          </label>
+          <textarea
+            className="cyber-textarea"
+            placeholder="Describe el objetivo principal, el problema que resuelve y el público objetivo..."
+            value={state.descripcionProyecto}
+            onChange={e => set('descripcionProyecto', e.target.value)}
+            rows={4}
+          />
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+          <div>
+            <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#374151', marginBottom: '0.375rem' }}>
+              Tipo de Aplicación
+            </label>
+            <select className="cyber-input" value={state.tipoApp} onChange={e => set('tipoApp', e.target.value)}>
+              {TIPOS.map(t => <option key={t} value={t}>{t}</option>)}
+            </select>
+          </div>
+          <div>
+            <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#374151', marginBottom: '0.375rem' }}>
+              Industria
+            </label>
+            <select className="cyber-input" value={state.industria} onChange={e => set('industria', e.target.value)}>
+              <option value="">Selecciona...</option>
+              {INDUSTRIAS.map(i => <option key={i} value={i}>{i}</option>)}
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 600, color: '#374151', marginBottom: '0.5rem' }}>
+            Plataformas objetivo
+          </label>
+          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+            {PLATAFORMAS.map(p => (
+              <button
+                key={p}
+                type="button"
+                onClick={() => dispatch({ type: 'TOGGLE_PLATAFORMA', plataforma: p })}
+                style={{
+                  padding: '0.375rem 0.875rem',
+                  borderRadius: '9999px',
+                  fontSize: '0.8125rem',
+                  fontWeight: 500,
+                  border: `1.5px solid ${state.plataforma.includes(p) ? '#00abbf' : '#e5e7eb'}`,
+                  background: state.plataforma.includes(p) ? 'rgba(0,171,191,0.1)' : '#fff',
+                  color: state.plataforma.includes(p) ? '#00abbf' : '#6b7280',
+                  cursor: 'pointer',
+                }}
+              >
+                {p}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -64,40 +64,43 @@ export const ConfiguracionAPIKeys = ({ abierto, onCerrar }: Props) => {
         <div style={{
             position: 'fixed', inset: 0, zIndex: 9999,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(4px)',
+            background: 'rgba(10,10,18,0.8)', backdropFilter: 'blur(8px)',
         }} onClick={onCerrar}>
             <div onClick={e => e.stopPropagation()} style={{
                 width: '100%', maxWidth: '480px', borderRadius: '16px',
-                background: 'white', boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
+                background: 'rgba(10,10,18,0.95)', boxShadow: '0 0 30px rgba(0,171,191,0.3)',
+                border: '1px solid rgba(0,171,191,0.5)',
                 padding: '28px', position: 'relative',
             }}>
                 {/* Header */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
                     <div style={{
                         width: '36px', height: '36px', borderRadius: '10px',
-                        background: 'linear-gradient(135deg, #00abbf, #007a8a)',
+                        background: 'linear-gradient(135deg, #00ffff, #9d22e6)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        boxShadow: '0 0 10px rgba(0,171,191,0.5)'
                     }}>
-                        <Settings size={18} color="white" />
+                        <Settings size={18} color="#0a0a12" />
                     </div>
                     <div>
-                        <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, color: '#1a1a2e' }}>
+                        <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, color: '#00ffff', textShadow: '0 0 5px rgba(0,171,191,0.5)' }}>
                             Configuración de transcripción de audio
                         </h3>
-                        <p style={{ margin: 0, fontSize: '0.78rem', color: '#9090a0' }}>
-                            Proveedor: <strong>Groq</strong> (gratuito)
+                        <p style={{ margin: 0, fontSize: '0.78rem', color: '#a0a0b0' }}>
+                            Proveedor: <strong style={{ color: '#e0e0e8' }}>Groq</strong> (gratuito)
                         </p>
                     </div>
                     <button onClick={onCerrar} style={{
                         marginLeft: 'auto', background: 'none', border: 'none',
-                        cursor: 'pointer', color: '#b0b0c0', padding: '4px',
-                    }}>
+                        cursor: 'pointer', color: '#a0a0b0', padding: '4px',
+                        transition: 'color 0.2s'
+                    }} onMouseEnter={e => e.currentTarget.style.color = '#ff003c'} onMouseLeave={e => e.currentTarget.style.color = '#a0a0b0'}>
                         <X size={18} />
                     </button>
                 </div>
 
                 {/* Input de la key */}
-                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 600, color: '#1a1a2e', marginBottom: '6px' }}>
+                <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 600, color: '#00ffff', marginBottom: '6px', textShadow: '0 0 5px rgba(0,171,191,0.3)' }}>
                     API Key
                 </label>
                 <div style={{ display: 'flex', gap: '6px', marginBottom: '10px' }}>
@@ -113,28 +116,31 @@ export const ConfiguracionAPIKeys = ({ abierto, onCerrar }: Props) => {
                         />
                         <button onClick={() => setMostrarKey(!mostrarKey)} style={{
                             position: 'absolute', right: '8px', top: '50%', transform: 'translateY(-50%)',
-                            background: 'none', border: 'none', cursor: 'pointer', color: '#b0b0c0', padding: '2px',
-                        }}>
+                            background: 'none', border: 'none', cursor: 'pointer', color: '#a0a0b0', padding: '2px',
+                            transition: 'color 0.2s'
+                        }} onMouseEnter={e => e.currentTarget.style.color = '#00ffff'} onMouseLeave={e => e.currentTarget.style.color = '#a0a0b0'}>
                             {mostrarKey ? <EyeOff size={15} /> : <Eye size={15} />}
                         </button>
                     </div>
                     <button onClick={handleLimpiar} style={{
-                        padding: '6px 12px', borderRadius: '8px', border: '1px solid #e0e0e8',
-                        background: '#f8f8fc', color: '#5a5a6e', fontSize: '0.78rem', cursor: 'pointer',
-                    }}>
+                        padding: '6px 12px', borderRadius: '8px', border: '1px solid rgba(255,0,60,0.3)',
+                        background: 'rgba(255,0,60,0.1)', color: '#ff003c', fontSize: '0.78rem', cursor: 'pointer',
+                        boxShadow: '0 0 10px rgba(255,0,60,0.2)', textShadow: '0 0 5px rgba(255,0,60,0.5)', transition: 'all 0.2s'
+                    }} onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,0,60,0.2)'; e.currentTarget.style.boxShadow = '0 0 15px rgba(255,0,60,0.4)'; }} onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,0,60,0.1)'; e.currentTarget.style.boxShadow = '0 0 10px rgba(255,0,60,0.2)'; }}>
                         Limpiar
                     </button>
                 </div>
 
                 {/* Botón verificar */}
                 <button onClick={handleVerificar} disabled={verificando || !key.trim()} style={{
-                    width: '100%', padding: '10px', borderRadius: '8px', border: 'none',
-                    background: verificando ? '#e0e0e8' : 'linear-gradient(135deg, #00abbf, #007a8a)',
-                    color: verificando ? '#9090a0' : 'white', fontWeight: 700, fontSize: '0.85rem',
+                    width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid rgba(0,171,191,0.5)',
+                    background: verificando ? 'rgba(160,160,176,0.2)' : 'linear-gradient(135deg, rgba(0,171,191,0.2), rgba(157,34,230,0.2))',
+                    color: verificando ? '#a0a0b0' : '#00ffff', fontWeight: 700, fontSize: '0.85rem',
                     cursor: verificando || !key.trim() ? 'not-allowed' : 'pointer',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                    marginBottom: '12px',
-                }}>
+                    marginBottom: '12px', boxShadow: verificando ? 'none' : '0 0 15px rgba(0,171,191,0.3)',
+                    textShadow: verificando ? 'none' : '0 0 5px rgba(0,171,191,0.5)', transition: 'all 0.2s'
+                }} onMouseEnter={e => { if (!verificando && key.trim()) { e.currentTarget.style.background = 'linear-gradient(135deg, rgba(0,171,191,0.3), rgba(157,34,230,0.3))'; e.currentTarget.style.boxShadow = '0 0 20px rgba(0,171,191,0.5)'; } }} onMouseLeave={e => { if (!verificando && key.trim()) { e.currentTarget.style.background = 'linear-gradient(135deg, rgba(0,171,191,0.2), rgba(157,34,230,0.2))'; e.currentTarget.style.boxShadow = '0 0 15px rgba(0,171,191,0.3)'; } }}>
                     {verificando && <Loader2 size={15} style={{ animation: 'spin 1s linear infinite' }} />}
                     {verificando ? 'Verificando...' : 'Verificar conexión'}
                 </button>
@@ -143,11 +149,12 @@ export const ConfiguracionAPIKeys = ({ abierto, onCerrar }: Props) => {
                 {estado === 'valida' && (
                     <div style={{
                         display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 14px',
-                        borderRadius: '10px', background: 'rgba(16,185,129,0.08)',
-                        border: '1px solid rgba(16,185,129,0.2)', marginBottom: '14px',
+                        borderRadius: '10px', background: 'rgba(0,255,136,0.1)',
+                        border: '1px solid rgba(0,255,136,0.3)', marginBottom: '14px',
+                        boxShadow: 'inset 0 0 10px rgba(0,255,136,0.1)'
                     }}>
-                        <Check size={15} color="#10b981" />
-                        <span style={{ fontSize: '0.82rem', color: '#065f46', fontWeight: 600 }}>
+                        <Check size={15} color="#00ff88" style={{ filter: 'drop-shadow(0 0 5px rgba(0,255,136,0.5))' }} />
+                        <span style={{ fontSize: '0.82rem', color: '#00ff88', fontWeight: 600, textShadow: '0 0 5px rgba(0,255,136,0.3)' }}>
                             ✓ Conectado correctamente — key guardada
                         </span>
                     </div>
@@ -155,11 +162,12 @@ export const ConfiguracionAPIKeys = ({ abierto, onCerrar }: Props) => {
                 {estado === 'invalida' && (
                     <div style={{
                         display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 14px',
-                        borderRadius: '10px', background: 'rgba(239,68,68,0.08)',
-                        border: '1px solid rgba(239,68,68,0.2)', marginBottom: '14px',
+                        borderRadius: '10px', background: 'rgba(255,0,60,0.1)',
+                        border: '1px solid rgba(255,0,60,0.3)', marginBottom: '14px',
+                        boxShadow: 'inset 0 0 10px rgba(255,0,60,0.1)'
                     }}>
-                        <X size={15} color="#ef4444" />
-                        <span style={{ fontSize: '0.82rem', color: '#991b1b', fontWeight: 600 }}>
+                        <X size={15} color="#ff003c" style={{ filter: 'drop-shadow(0 0 5px rgba(255,0,60,0.5))' }} />
+                        <span style={{ fontSize: '0.82rem', color: '#ff003c', fontWeight: 600, textShadow: '0 0 5px rgba(255,0,60,0.3)' }}>
                             ✗ Key inválida — verifica que la copiaste completa
                         </span>
                     </div>
@@ -167,15 +175,16 @@ export const ConfiguracionAPIKeys = ({ abierto, onCerrar }: Props) => {
 
                 {/* Info de privacidad */}
                 <div style={{
-                    padding: '12px', borderRadius: '10px', background: '#f8f8fc',
-                    border: '1px solid rgba(0,171,191,0.1)', marginBottom: '14px',
+                    padding: '12px', borderRadius: '10px', background: 'rgba(10,10,18,0.6)',
+                    border: '1px solid rgba(0,171,191,0.3)', marginBottom: '14px',
+                    boxShadow: 'inset 0 0 10px rgba(0,171,191,0.1)'
                 }}>
-                    <p style={{ margin: '0 0 6px', fontSize: '0.77rem', color: '#5a5a6e', lineHeight: 1.5 }}>
-                        🔒 Tu key se guarda <strong>solo en este navegador</strong> (localStorage).
+                    <p style={{ margin: '0 0 6px', fontSize: '0.77rem', color: '#e0e0e8', lineHeight: 1.5 }}>
+                        🔒 Tu key se guarda <strong style={{ color: '#00ffff', textShadow: '0 0 5px rgba(0,171,191,0.3)' }}>solo en este navegador</strong> (localStorage).
                         No se comparte con Herman ni otros servidores.
                     </p>
-                    <p style={{ margin: 0, fontSize: '0.77rem', color: '#5a5a6e', lineHeight: 1.5 }}>
-                        📊 Límite gratuito: <strong>~7 horas de audio por día</strong>
+                    <p style={{ margin: 0, fontSize: '0.77rem', color: '#e0e0e8', lineHeight: 1.5 }}>
+                        📊 Límite gratuito: <strong style={{ color: '#00ff88', textShadow: '0 0 5px rgba(0,255,136,0.3)' }}>~7 horas de audio por día</strong>
                     </p>
                 </div>
 
@@ -186,9 +195,12 @@ export const ConfiguracionAPIKeys = ({ abierto, onCerrar }: Props) => {
                     rel="noopener noreferrer"
                     style={{
                         display: 'flex', alignItems: 'center', gap: '6px',
-                        fontSize: '0.82rem', color: '#00abbf', fontWeight: 600,
-                        textDecoration: 'none',
+                        fontSize: '0.82rem', color: '#00ffff', fontWeight: 600,
+                        textDecoration: 'none', textShadow: '0 0 5px rgba(0,171,191,0.5)',
+                        transition: 'all 0.2s'
                     }}
+                    onMouseEnter={e => { e.currentTarget.style.color = '#9d22e6'; e.currentTarget.style.textShadow = '0 0 5px rgba(157,34,230,0.5)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.color = '#00ffff'; e.currentTarget.style.textShadow = '0 0 5px rgba(0,171,191,0.5)'; }}
                 >
                     <ExternalLink size={14} />
                     Obtener key gratis → console.groq.com

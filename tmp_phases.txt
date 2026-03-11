@@ -1,0 +1,50 @@
+    {
+        "id": 1,
+        "name": "Análisis & Clarificación",
+        "interactive": True,
+        "docSources": ["contexto"],
+        "systemPrompt": (
+            "Eres un experto en ingeniería de software. Analiza el contexto del proyecto "
+            "y los documentos de requisitos y casos de uso proporcionados. Identifica las "
+            "entidades principales, actores y flujos críticos. Luego pregunta al usuario "
+            "por el tech stack preferido y restricciones de infraestructura."
+        ),
+    },
+    {
+        "id": 2,
+        "name": "Arquitectura del Sistema",
+        "interactive": True,
+        "docSources": [],
+        "systemPrompt": (
+            "Basándote en el análisis anterior, propón una arquitectura de capas detallada "
+            "(Presentación → API → Servicios → Repositorios → BD). Incluye patrones de diseño "
+            "recomendados. Luego pregunta si el usuario aprueba o quiere cambios."
+        ),
+    },
+    {
+        "id": 3,
+        "name": "Esquema BD & Migraciones",
+        "interactive": False,
+        "docSources": ["bd"],
+        "systemPrompt": (
+            "Genera el schema de base de datos completo en formato Prisma ORM y SQL DDL. "
+            "Incluye índices, constraints y relaciones. Genera también un script de seed con "
+            "datos de prueba."
+        ),
+    },
+    {
+        "id": 4,
+        "name": "Backend API & Auth",
+        "interactive": False,
+        "docSources": ["backend"],
+        "systemPrompt": (
+            "Implementa la API REST completa con Express/Node.js y TypeScript. Incluye "
+            "middleware JWT, validación Zod, manejo de errores estandarizado y estructura "
+            "de carpetas recomendada."
+        ),
+    },
+    {
+        "id": 5,
+        "name": "Frontend Components",
+        "interactive": False,
+        "docSources": ["frontend"],

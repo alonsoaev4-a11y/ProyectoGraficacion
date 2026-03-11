@@ -1,0 +1,708 @@
+
+> herman-platform@0.0.1 dev
+> vite
+
+[2m3:09:57 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because lockfile has changed
+
+  [32m[1mVITE[22m v6.3.5[39m  [2mready in [0m[1m1357[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m3:49:45 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\dashboard\DetalleProyecto.tsx, /src/styles/index.css[22m
+[2m3:49:50 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\dashboard\DetalleProyecto.tsx, /src/styles/index.css[22m
+[2m3:49:53 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\dashboard\DetalleProyecto.tsx, /src/styles/index.css[22m
+[2m3:49:56 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\dashboard\DetalleProyecto.tsx, /src/styles/index.css[22m
+[2m3:49:59 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\EditorDiagramaFlujo.tsx, /src/styles/index.css[22m
+[2m3:50:04 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\EditorDiagramaFlujo.tsx, /src/styles/index.css[22m
+[2m3:50:08 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\EditorDiagramaFlujo.tsx, /src/styles/index.css[22m
+[2m3:50:13 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\EditorDiagramaFlujo.tsx, /src/styles/index.css[22m
+[2m3:50:21 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/styles/index.css[22m
+[2m3:50:24 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/styles/index.css[22m
+[2m3:50:25 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/styles/index.css[22m
+[2m3:50:27 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/styles/index.css[22m
+[2m3:50:29 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/styles/index.css[22m
+[2m3:50:34 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/styles/index.css[22m
+[2m3:50:36 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/styles/index.css[22m
+[2m3:50:39 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/styles/index.css[22m
+[2m3:50:40 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/styles/index.css[22m
+[2m3:50:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/styles/index.css[22m
+[2m4:07:06 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ConfiguracionPage.tsx, /src/styles/index.css[22m
+[2m4:07:51 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/EquiposPage.tsx, /src/styles/index.css[22m
+[2m4:08:47 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\auditoria\RegistroAuditoria.tsx, /src/styles/index.css[22m
+[2m4:08:47 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/context/AuthContext.tsx, /src/styles/index.css, /src/pages/DashboardPage.tsx, /src/pages/RegisterPage.tsx, /src/pages/LoginPage.tsx, /src/pages/metadatos/MetadatosPage.tsx, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\dashboard\DetalleProyecto.tsx, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\casos-uso\EditorCasosUso.tsx, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\auditoria\RegistroAuditoria.tsx, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\modelado\ModeladorDatos.tsx, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\requisitos\EditorRequisitos.tsx, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\generacion\GeneradorCodigo.tsx, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\EditorDiagramaFlujo.tsx, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx, /src/pages/ConfiguracionPage.tsx[22m
+[2m4:08:48 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:08:48 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/context/AuthContext.tsx[22m
+[2m5:51:06 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/metadatos/MetadatosPage.tsx, /src/styles/index.css[22m
+[2m5:51:34 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\casos-uso\EditorCasosUso.tsx, /src/styles/index.css[22m
+[2m5:52:11 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardPage.tsx, /src/styles/index.css[22m
+[2m10:25:00 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m11:12:17 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m11:36:40 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m11:37:14 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m11:37:19 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m11:38:42 p.m.[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx: Expected corresponding JSX closing tag for <div>. (1086:6)
+
+[0m [90m 1084 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 1085 |[39m         )}
+[31m[1m>[22m[39m[90m 1086 |[39m       [33m<[39m[33m/[39m[33mmain[39m[33m>[39m
+ [90m      |[39m       [31m[1m^[22m[39m
+ [90m 1087 |[39m
+ [90m 1088 |[39m       {[90m/* ── Right: Context Inspector ─────────────────────── */[39m}
+ [90m 1089 |[39m       {contextOpen [33m&&[39m ([0m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Alons/OneDrive/Escritorio/proyecto herman react/src/app/components/acciones/ia/PanelIA.tsx[39m:1086:6
+[33m  1116|                  {contextLog.length} entradas
+  1117|                </p>
+  1118|              </div>
+     |           ^
+  1119|              <button
+  1120|                onClick={copyContext}[39m
+[2m11:38:42 p.m.[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx: Expected corresponding JSX closing tag for <div>. (1086:6)
+
+[0m [90m 1084 |[31m           [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 1085 |[31m         )}
+[31m[1m>[22m[31m[90m 1086 |[31m       [33m<[31m[33m/[31m[33mmain[31m[33m>[31m
+ [90m      |[31m       [31m[1m^[22m[31m
+ [90m 1087 |[31m
+ [90m 1088 |[31m       {[90m/* ── Right: Context Inspector ─────────────────────── */[31m}
+ [90m 1089 |[31m       {contextOpen [33m&&[31m ([0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Alons/OneDrive/Escritorio/proyecto herman react/src/app/components/acciones/ia/PanelIA.tsx[39m:1086:6
+[33m  1116|                  {contextLog.length} entradas
+  1117|                </p>
+  1118|              </div>
+     |           ^
+  1119|              <button
+  1120|                onClick={copyContext}[39m
+      at constructor (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4727:16)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10831:21)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6907:20)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9775:18)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10800:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10800:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12493:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11675:28)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11331:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10986:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10981:21)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10947:27)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9306:18)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10908:17)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4632:31)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4711:36)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+[2m11:38:52 p.m.[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx: Expected corresponding JSX closing tag for <div>. (1086:6)
+
+[0m [90m 1084 |[31m           [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 1085 |[31m         )}
+[31m[1m>[22m[31m[90m 1086 |[31m       [33m<[31m[33m/[31m[33mmain[31m[33m>[31m
+ [90m      |[31m       [31m[1m^[22m[31m
+ [90m 1087 |[31m
+ [90m 1088 |[31m       {[90m/* ── Right: Context Inspector ─────────────────────── */[31m}
+ [90m 1089 |[31m       {contextOpen [33m&&[31m ([0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Alons/OneDrive/Escritorio/proyecto herman react/src/app/components/acciones/ia/PanelIA.tsx[39m:1086:6
+[33m  1116|                  {contextLog.length} entradas
+  1117|                </p>
+  1118|              </div>
+     |           ^
+  1119|              <button
+  1120|                onClick={copyContext}[39m
+      at constructor (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4727:16)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10831:21)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6907:20)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9775:18)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10800:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10800:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12493:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11675:28)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11331:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOpBaseRightExpr (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10986:34)
+      at TypeScriptParserMixin.parseExprOpRightExpr (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10981:21)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10947:27)
+      at TypeScriptParserMixin.parseExprOp (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9306:18)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10908:17)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.jsxParseExpressionContainer (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4632:31)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4711:36)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4698:32)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+[2m11:42:21 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m11:54:25 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m11:57:12 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m11:57:24 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ new dependencies optimized: [33mjszip, file-saver[32m[39m
+[2m11:57:24 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ optimized dependencies changed. reloading[39m
+[2m11:57:49 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m12:08:04 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m12:08:32 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m12:09:41 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx[22m
+[2m12:27:41 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx[22m
+[2m12:27:46 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m12:29:01 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m12:29:40 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx[22m
+[2m12:30:49 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx[22m
+[2m12:33:04 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx[22m
+[2m12:35:17 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m12:35:27 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx[22m
+[2m12:38:56 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx[22m
+[2m7:58:39 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:59:33 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx[22m
+[2m8:38:44 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:38:49 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:38:49 a.m.[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx: Expected corresponding JSX closing tag for <button>. (218:6)
+
+[0m [90m 216 |[31m           [33m/[31m[33m>[31m
+ [90m 217 |[31m         )}
+[31m[1m>[22m[31m[90m 218 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m     |[31m       [31m[1m^[22m[31m
+ [90m 219 |[31m
+ [90m 220 |[31m       {[90m/* Text */[31m}
+ [90m 221 |[31m       [33m<[31m[33mdiv[31m style[33m=[31m{{ paddingBottom[33m:[31m isLast [33m?[31m [32m'0'[31m [33m:[31m [32m'20px'[31m[33m,[31m paddingTop[33m:[31m [32m'2px'[31m }}[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Alons/OneDrive/Escritorio/proyecto herman react/src/app/components/acciones/ia/PanelIA.tsx[39m:218:6
+[33m  223|            style={{
+  224|              fontSize: '0.78rem',
+  225|              fontWeight: 600,
+     |                ^
+  226|              color: textColor,
+  227|              margin: 0,[39m
+      at constructor (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4727:16)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4749:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4759:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10831:21)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9775:39
+      at TypeScriptParserMixin.tryParse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6907:20)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9775:18)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10800:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12426:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10800:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12493:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11675:28)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11331:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseReturnStatement (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13142:28)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12798:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12747:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13316:61)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseBlock (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13297:10)
+      at TypeScriptParserMixin.parseFunctionBody (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12100:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12086:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9172:18)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13445:12
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12403:14)
+      at TypeScriptParserMixin.parseFunction (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13444:10)
+[2m8:38:58 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:39:02 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:39:06 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:39:15 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:39:32 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:39:38 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:39:43 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:39:51 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:40:08 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:40:16 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:40:25 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:40:58 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:41:33 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:41:33 a.m.[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx: Unexpected token (527:3)
+
+[0m [90m 525 |[31m
+ [90m 526 |[31m     setTerminalLines((prev) [33m=>[31m [[33m...[31mprev[33m,[31m { id[33m:[31m uid()[33m,[31m type[33m,[31m content }])[33m;[31m
+[31m[1m>[22m[31m[90m 527 |[31m   }[33m,[31m [])[33m;[31m
+ [90m     |[31m    [31m[1m^[22m[31m
+ [90m 528 |[31m
+ [90m 529 |[31m   [36mconst[31m appendToLastAiLine [33m=[31m useCallback((token[33m:[31m string) [33m=>[31m {
+ [90m 530 |[31m     setTerminalLines((prev) [33m=>[31m {[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Alons/OneDrive/Escritorio/proyecto herman react/src/app/components/acciones/ia/PanelIA.tsx[39m:527:3
+[33m  536|        }
+  537|        lastAiMsgRef.current = token;
+  538|        return [...prev, { id: uid(), type: 'ai', content: token }];
+     |                     ^
+  539|      });
+  540|    }, []);[39m
+      at constructor (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6619:16)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11442:22)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12895:23)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12744:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13316:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12622:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12612:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:14488:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10126:18)
+      at parse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:14522:38)
+      at parser (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:261:32)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:223:11)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:189:28
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:113:33
+      at step (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:287:14)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:223:11)
+[2m8:41:51 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:41:51 a.m.[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx: Unexpected token (527:3)
+
+[0m [90m 525 |[31m
+ [90m 526 |[31m     setTerminalLines((prev) [33m=>[31m [[33m...[31mprev[33m,[31m { id[33m:[31m uid()[33m,[31m type[33m,[31m content }])[33m;[31m
+[31m[1m>[22m[31m[90m 527 |[31m   }[33m,[31m [])[33m;[31m
+ [90m     |[31m    [31m[1m^[22m[31m
+ [90m 528 |[31m
+ [90m 529 |[31m   [36mconst[31m appendToLastAiLine [33m=[31m useCallback((token[33m:[31m string) [33m=>[31m {
+ [90m 530 |[31m     setTerminalLines((prev) [33m=>[31m {[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Alons/OneDrive/Escritorio/proyecto herman react/src/app/components/acciones/ia/PanelIA.tsx[39m:527:3
+[33m  536|        }
+  537|        lastAiMsgRef.current = token;
+  538|        return [...prev, { id: uid(), type: 'ai', content: token }];
+     |                     ^
+  539|      });
+  540|    }, []);[39m
+      at constructor (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6619:16)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11442:22)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12895:23)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12744:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13316:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12622:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12612:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:14488:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10126:18)
+      at parse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:14522:38)
+      at parser (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:261:32)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:223:11)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:189:28
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:113:33
+      at step (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:287:14)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:223:11)
+[2m8:42:03 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:42:03 a.m.[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx: Unexpected token (527:3)
+
+[0m [90m 525 |[31m
+ [90m 526 |[31m     setTerminalLines((prev) [33m=>[31m [[33m...[31mprev[33m,[31m { id[33m:[31m uid()[33m,[31m type[33m,[31m content }])[33m;[31m
+[31m[1m>[22m[31m[90m 527 |[31m   }[33m,[31m [])[33m;[31m
+ [90m     |[31m    [31m[1m^[22m[31m
+ [90m 528 |[31m
+ [90m 529 |[31m   [36mconst[31m appendToLastAiLine [33m=[31m useCallback((token[33m:[31m string) [33m=>[31m {
+ [90m 530 |[31m     setTerminalLines((prev) [33m=>[31m {[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/Alons/OneDrive/Escritorio/proyecto herman react/src/app/components/acciones/ia/PanelIA.tsx[39m:527:3
+[33m  536|        }
+  537|        lastAiMsgRef.current = token;
+  538|        return [...prev, { id: uid(), type: 'ai', content: token }];
+     |                     ^
+  539|      });
+  540|    }, []);[39m
+      at constructor (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6599:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:6619:16)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11442:22)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:4764:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11081:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11066:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:11046:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9837:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10899:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10904:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10881:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10831:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9786:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10784:23)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12421:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10780:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12895:23)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:9508:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12767:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12744:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13316:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:13309:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12622:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:12612:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:14488:25)
+      at TypeScriptParserMixin.parse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:10126:18)
+      at parse (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\parser\lib\index.js:14522:38)
+      at parser (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\transformation\normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:261:32)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:223:11)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:189:28
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:113:33
+      at step (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:287:14)
+      at C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\gensync\index.js:223:11)
+[2m8:42:27 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m9:48:08 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m10:00:02 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\generacion\GeneradorCodigo.tsx, /src/styles/index.css[22m
+[2m10:00:03 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\generacion\GeneradorCodigo.tsx[22m Could not Fast Refresh (new export)
+[2m10:00:03 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css, /@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\dashboard\DetalleProyecto.tsx[22m
+[2m10:06:17 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\generacion\GeneradorCodigo.tsx, /src/styles/index.css[22m
+[2m10:06:18 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\generacion\GeneradorCodigo.tsx[22m Could not Fast Refresh ("inferHTTPVerb" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m10:06:18 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/acciones/generacion/GeneradorCodigo.tsx[22m[2m (circular import invalidate)[22m
+[2m10:06:38 a.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\dashboard\DetalleProyecto.tsx, /src/styles/index.css[22m
+[2m6:09:49 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m6:21:14 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m6:46:15 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:08:38 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:08:44 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:09:08 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:09:45 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:10:09 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:10:55 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:14:48 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:19:59 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:20:04 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:20:10 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:21:33 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:29:28 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:31:49 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:31:55 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m7:32:03 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m8:30:47 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx, /src/styles/index.css[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/App.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\auditoria\RegistroAuditoria.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\casos-uso\components\HelpTooltip.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\casos-uso\components\SectionList.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\casos-uso\components\StepItem.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\casos-uso\components\UseCaseDetail.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\casos-uso\components\UseCaseList.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\configuracion\PanelConfiguracion.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\casos-uso\EditorCasosUso.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/acciones/casos-uso/types.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\EditorDiagramaFlujo.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\FlowPropertyPanel.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\GestorDiagramas.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\mermaid\DiagramaCasosUsoMermaid.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\mermaid\DiagramaERMermaid.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\diagramas\mermaid\MermaidDiagram.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\generacion\GeneradorCodigo.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/acciones/generacion/zipSpecsBuilder.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\ia\PanelIA.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/acciones/ia/CodeExtractor.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\requisitos\EditorRequisitos.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\acciones\modelado\ModeladorDatos.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/CapturaRequisitos.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\dashboard\DetalleProyecto.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/dashboard/EstadosVacios.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\dashboard\ModalCrearProyecto.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\app\components\dashboard\TarjetaProyecto.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/figma/ImageWithFallback.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/layout/sidebar/BarraLateral.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/layout/topbar/BarraSuperior.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/accordion.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/alert-dialog.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/alert.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/aspect-ratio.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/avatar.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/badge.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/breadcrumb.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/button.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/calendar.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/card.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/carousel.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/chart.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/checkbox.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/collapsible.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/command.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/context-menu.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/dialog.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/drawer.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/dropdown-menu.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/form.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/hover-card.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/input-otp.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/input.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/label.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/menubar.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/navigation-menu.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/pagination.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/popover.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/radio-group.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/progress.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/resizable.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/scroll-area.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/select.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/separator.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/sheet.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/sidebar.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/skeleton.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/slider.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/sonner.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/switch.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/table.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/tabs.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/textarea.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/toggle-group.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/tooltip.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/toggle.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/use-mobile.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/ui/utils.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/TourGuia.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/auth/AuthLayout.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\ConfiguracionAPIKeys.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/components/SubidorArchivo.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/components/SubidorAudio.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\dashboard\StatsCards.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\landing\Features.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\landing\Footer.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\landing\Header.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\landing\Hero.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\landing\HowItWorks.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\landing\MiniDemo.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\landing\Testimonials.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\ui\Button.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\ui\GlassCard.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\ui\Card.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\ui\Input.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/DashboardLayout.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\layout\ProjectModuleLayout.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\layout\Sidebar.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\components\layout\TopBar.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/components/wizard/WizardButton.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/components/wizard/WizardOverlay.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/wizard/WizardProvider.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/components/wizard/WizardSpotlight.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/components/wizard/WizardTooltip.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/main.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/lib/api.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/lib/utils.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/context/AuthContext.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/config/wizardSteps.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/hooks/useSimulatedAuth.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ConfiguracionPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/EquiposPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/LandingPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/LoginPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/RegisterPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\TeamCard.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/metadatos/metadatos.css[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/metadatos/MetadatosPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/pages/metadatos/metadatosReducer.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\metadatos\components\JsonPreview.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/pages/metadatos/components/ListaDinamica.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/pages/metadatos/components/SeccionMetodo.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\metadatos\components\TagInput.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/pages/metadatos/hooks/useToast.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\metadatos\secciones\SeccionAnalisisDocumental.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\metadatos\secciones\SeccionEncuesta.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\metadatos\secciones\SeccionEntrevista.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\metadatos\secciones\SeccionHistorias.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\metadatos\secciones\SeccionInfoGeneral.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\metadatos\secciones\SeccionMetodos.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\metadatos\secciones\SeccionObservacion.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\src\pages\metadatos\secciones\SeccionResumen.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/project/AuditoriaPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/project/CasosUsoPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/project/DiagramaFlujoPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/project/GeneracionPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/project/ModeladoPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/project/RequisitosPage.tsx[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/cyberpunk.css[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/dashboard.css[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/fonts.css[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/tailwind.css[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/theme.css[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/styles/wizard.css[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/utils/analizadorHerman.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/utils/extractores.ts[22m
+[2m9:29:42 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/utils/transcriptorAudio.ts[22m
+[2m9:29:42 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: C:/Users/Alons/OneDrive/Escritorio/proyecto herman react/src/main.tsx). Does the file exist?
+[2m9:30:22 p.m.[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m9:30:22 p.m.[22m [36m[1m[vite][22m[39m server restarted.
+[2m9:30:23 p.m.[22m [31m[1m[vite][22m[39m [31mInternal server error: Cannot find module 'C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\vite\dist\node\chunks\dep-CvfTChi5.js' imported from C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\vite\dist\node\chunks\dep-DBxKXgDP.js[39m
+      at finalizeResolution (node:internal/modules/esm/resolve:274:11)
+      at moduleResolve (node:internal/modules/esm/resolve:859:10)
+      at defaultResolve (node:internal/modules/esm/resolve:983:11)
+      at nextResolve (node:internal/modules/esm/hooks:748:28)
+      at o (file:///C:/Users/Alons/OneDrive/Escritorio/proyecto%20herman%20react/node_modules/@tailwindcss/node/dist/esm-cache.loader.mjs:1:69)
+      at nextResolve (node:internal/modules/esm/hooks:748:28)
+      at Hooks.resolve (node:internal/modules/esm/hooks:240:30)
+      at MessagePort.handleMessage (node:internal/modules/esm/worker:199:24)
+      at [nodejs.internal.kHybridDispatch] (node:internal/event_target:827:20)
+      at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28)
+[2m9:30:56 p.m.[22m [36m[1m[vite][22m[39m changed tsconfig file detected: C:/Users/Alons/OneDrive/Escritorio/proyecto herman react/frontend/tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+[2m9:32:22 p.m.[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mfrontend/src/index.html[22m
+[2m9:38:18 p.m.[22m [31m[1m[vite][22m[39m [31mInternal server error: Cannot find module 'C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\vite\dist\node\chunks\dep-CvfTChi5.js' imported from C:\Users\Alons\OneDrive\Escritorio\proyecto herman react\node_modules\vite\dist\node\chunks\dep-DBxKXgDP.js[39m
+      at finalizeResolution (node:internal/modules/esm/resolve:274:11)
+      at moduleResolve (node:internal/modules/esm/resolve:859:10)
+      at defaultResolve (node:internal/modules/esm/resolve:983:11)
+      at nextResolve (node:internal/modules/esm/hooks:748:28)
+      at o (file:///C:/Users/Alons/OneDrive/Escritorio/proyecto%20herman%20react/node_modules/@tailwindcss/node/dist/esm-cache.loader.mjs:1:69)
+      at nextResolve (node:internal/modules/esm/hooks:748:28)
+      at Hooks.resolve (node:internal/modules/esm/hooks:240:30)
+      at MessagePort.handleMessage (node:internal/modules/esm/worker:199:24)
+      at [nodejs.internal.kHybridDispatch] (node:internal/event_target:827:20)
+      at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28)
+[2m9:38:31 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:39:07 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:39:13 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:51:28 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:51:29 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:52:27 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:52:28 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:52:30 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:53:38 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:53:38 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:53:42 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:39:44 a.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m9:39:44 a.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m12:53:16 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m12:53:16 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m12:53:21 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m12:55:20 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?
+[2m12:56:02 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to load url /src/main.tsx (resolved id: /src/main.tsx). Does the file exist?

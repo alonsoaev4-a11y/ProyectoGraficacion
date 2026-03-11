@@ -15,8 +15,6 @@ import {
   Edit3,
   Save,
 } from 'lucide-react';
-import { StepType, ActionSemantics } from '../casos-uso/types';
-import { FlowPropertyPanel } from './FlowPropertyPanel';
 
 interface Node {
   id: string;
@@ -26,8 +24,6 @@ interface Node {
   y: number;
   actor?: string;
   timeout?: number;
-  semanticType?: StepType;
-  semantics?: ActionSemantics;
 }
 
 interface Connection {
@@ -347,18 +343,111 @@ export function EditorDiagramaFlujo() {
           </div>
         </div>
 
-        {/* Right Properties Panel: Replaced with FlowPropertyPanel */}
+        {/* Right Properties Panel */}
         {showPropertiesPanel && selectedNode && (
-          <FlowPropertyPanel
-            node={selectedNode}
-            onChange={(updatedNode: Node) => {
-              setNodes(nodes.map(n => n.id === updatedNode.id ? updatedNode : n));
-              setSelectedNode(updatedNode);
-            }}
-            onDuplicate={handleDuplicateNode}
-            onDelete={handleDeleteNode}
-            onClose={() => setShowPropertiesPanel(false)}
-          />
+          <aside className="w-80 bg-white border-l border-slate-200 p-6 overflow-y-auto">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="font-semibold text-slate-900">Propiedades del Nodo</h3>
+              <button
+                onClick={() => setShowPropertiesPanel(false)}
+                className="p-1 hover:bg-slate-100 text-slate-500 rounded"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Tipo</label>
+                <select
+                  value={selectedNode.type}
+                  onChange={(e) =>
+                    setNodes(
+                      nodes.map((n) =>
+                        n.id === selectedNode.id ? { ...n, type: e.target.value as any } : n
+                      )
+                    )
+                  }
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                >
+                  <option value="start">Inicio</option>
+                  <option value="action">Acción</option>
+                  <option value="decision">Decisión</option>
+                  <option value="actor">Actor</option>
+                  <option value="end">Fin</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Texto</label>
+                <textarea
+                  value={selectedNode.label}
+                  onChange={(e) =>
+                    setNodes(
+                      nodes.map((n) =>
+                        n.id === selectedNode.id ? { ...n, label: e.target.value } : n
+                      )
+                    )
+                  }
+                  rows={3}
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Actor</label>
+                <input
+                  type="text"
+                  value={selectedNode.actor || ''}
+                  onChange={(e) =>
+                    setNodes(
+                      nodes.map((n) =>
+                        n.id === selectedNode.id ? { ...n, actor: e.target.value } : n
+                      )
+                    )
+                  }
+                  placeholder="Ej: Secretaria"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Timeout (segundos)
+                </label>
+                <input
+                  type="number"
+                  value={selectedNode.timeout || ''}
+                  onChange={(e) =>
+                    setNodes(
+                      nodes.map((n) =>
+                        n.id === selectedNode.id ? { ...n, timeout: parseInt(e.target.value) } : n
+                      )
+                    )
+                  }
+                  placeholder="0"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+
+              <div className="pt-4 border-t border-slate-200">
+                <button
+                  onClick={handleDuplicateNode}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all mb-2"
+                >
+                  <Copy size={16} />
+                  Duplicar Nodo
+                </button>
+                <button
+                  onClick={handleDeleteNode}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all"
+                >
+                  <Trash2 size={16} />
+                  Eliminar Nodo
+                </button>
+              </div>
+            </div>
+          </aside>
         )}
       </div>
     </div>

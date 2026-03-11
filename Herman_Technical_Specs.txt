@@ -1,0 +1,73 @@
+# HERMAN - Technical Specifications & Architecture Document
+# Target Audience: AI Agents / Development Team
+# Project Orientation: AI-Driven Software Generation Platform
+
+## 1. PROJECT OVERVIEW
+- **Name**: Herman (ProyectoGraficacion)
+- **Purpose**: A comprehensive platform for capturing requirements, modeling data, defining use cases, and automatically generating software code (CRUD apps, APIs, etc.) based on the captured metadata.
+- **Core Philosophy**: Cyberpunk/Neon aesthetic, highly interactive, wizard-driven onboarding, and AI-assisted software generation.
+
+## 2. TECH STACK
+- **Frontend Framework**: React 18+ with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS + Custom CSS Variables (Dark/Neon Theme)
+- **Icons**: Lucide React
+- **Routing**: React Router (implied/custom routing via state)
+- **State Management**: React Hooks (useState, useEffect, useReducer for complex state like Metadata)
+- **Diagramming/Flows**: React Flow (for Flowcharts and Data Modeling)
+
+## 3. UI/UX DESIGN SYSTEM (DARK NEON EDITION)
+The application has been completely migrated from a light/white theme to a Dark Cyberpunk/Neon theme.
+
+### 3.1. Color Palette
+- **Background Primary**: `#0a0a12` (Deep dark blue/black)
+- **Background Secondary**: `rgba(10, 10, 18, 0.95)` (Glassmorphism dark)
+- **Text Primary**: `#e0e0e8` (Off-white/light gray)
+- **Text Secondary**: `#a0a0b0` (Muted gray)
+- **Accent Cyan (Primary)**: `#00ffff` (Used for primary actions, borders, glows)
+- **Accent Purple (Secondary)**: `#9d22e6` (Used for secondary actions, highlights)
+- **Accent Green (Success)**: `#00ff88` (Used for success states, additions)
+- **Accent Red (Danger)**: `#ff003c` (Used for destructive actions, errors)
+- **Accent Yellow (Warning)**: `#ffaa00` (Used for warnings, pending states)
+
+### 3.2. Styling Techniques
+- **Glassmorphism**: Extensive use of `rgba()` backgrounds with backdrop blur.
+- **Neon Glows**: Implemented via `box-shadow` (e.g., `shadow-[0_0_15px_rgba(0,171,191,0.3)]`) and `drop-shadow` on icons.
+- **Text Glows**: Implemented via `text-shadow` (e.g., `textShadow: '0 0 10px rgba(0,171,191,0.5)'`).
+- **Borders**: Semi-transparent colored borders (e.g., `border-[rgba(0,171,191,0.3)]`) that become opaque or change color on hover.
+
+## 4. CORE MODULES & ARCHITECTURE
+
+### 4.1. Dashboard (`src/app/components/dashboard/`)
+- **StatsCards**: Displays project metrics with neon styling.
+- **DetalleProyecto**: The main hub for a specific project. Acts as a layout container for all project-specific actions. Uses a sidebar to navigate between modules.
+
+### 4.2. Project Actions (`src/app/components/acciones/`)
+This is the core of the software generation pipeline. Each step feeds into the next:
+1. **Metadatos (`metadatos/`)**: Captures general info, methods (interviews, surveys), and generates a JSON summary. Uses `useReducer` for complex state management.
+2. **Requisitos (`requisitos/`)**: CRUD for functional and non-functional requirements.
+3. **Casos de Uso (`casos-uso/`)**: Defines actors, preconditions, postconditions, and step-by-step flows.
+4. **Flujos (`diagramas/`)**: Visual flowchart editor using React Flow.
+5. **Modelado (`modelado/`)**: Visual database schema designer (Tables, Columns, Relationships).
+6. **Generación (`generacion/`)**: The culmination module that takes all previous data (requirements, use cases, models) and orchestrates the generation of actual code (React, Node.js, SQL).
+7. **Auditoría (`auditoria/`)**: Tracks changes and history.
+8. **Configuración (`configuracion/`)**: Project-specific settings.
+
+### 4.3. Wizard System (`src/components/wizard/`)
+- A global onboarding/guidance system (`WizardProvider`).
+- Uses spotlights (`WizardSpotlight`) and tooltips (`WizardTooltip`) to guide the user through the complex software generation process.
+- Configured via `src/config/wizardSteps.ts`.
+
+## 5. RECENT SYSTEM MODIFICATIONS (CONTEXT FOR AI)
+- **Global Theme Override**: All components in `src/app/components/acciones/` have been stripped of Tailwind light classes (`bg-white`, `text-slate-900`, etc.) and replaced with arbitrary values matching the Dark Neon palette (e.g., `bg-[rgba(10,10,18,0.6)]`, `text-[#e0e0e8]`).
+- **CSS Variables**: `src/styles/theme.css` was updated to enforce dark mode at the root level.
+- **Build Fixes**: Resolved Vite compilation errors related to malformed CSS in `metadatos.css`.
+
+## 6. DATA STRUCTURES (SOFTWARE GENERATION CONTEXT)
+The system relies on passing structured data between modules:
+- `Requirement`: `{ id, code, title, description, type, priority, status, acceptanceCriteria, dependencies }`
+- `UseCase`: `{ id, code, title, description, actors, preconditions, postconditions, steps, alternativeFlows }`
+- `Table` (Data Model): `{ id, name, columns: [{ id, name, type, isPk, isFk }] }`
+- `Relationship`: `{ id, fromTable, toTable, type }`
+
+*Note for AI Agents: When generating new features or modifying existing ones, strictly adhere to the Dark Neon color palette and ensure all new UI components use the established glassmorphism and glow techniques. Avoid standard Tailwind light/gray classes.*
