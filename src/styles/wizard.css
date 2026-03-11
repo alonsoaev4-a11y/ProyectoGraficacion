@@ -1,52 +1,209 @@
-/* src/styles/wizard.css */
+/* ============================================
+   HERMAN PLATFORM — Wizard / Tour Styles
+   ============================================ */
 
-@keyframes wizardPulse {
-
-    0%,
-    100% {
-        box-shadow:
-            0 0 0 4px rgba(0, 217, 255, 0.6),
-            0 0 20px 8px rgba(0, 217, 255, 0.4),
-            0 0 40px 12px rgba(0, 217, 255, 0.2);
-    }
-
-    50% {
-        box-shadow:
-            0 0 0 8px rgba(0, 217, 255, 0.8),
-            0 0 30px 12px rgba(0, 217, 255, 0.6),
-            0 0 60px 16px rgba(0, 217, 255, 0.3);
-    }
+.wizard-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  pointer-events: none;
 }
 
-.wizard-trigger-btn {
-    @apply px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/50 rounded-lg text-cyan-400 hover:border-cyan-400 transition-all duration-200 flex items-center gap-2 text-sm font-medium;
+.wizard-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: all;
 }
 
-.wizard-trigger-btn:hover {
-    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+.wizard-spotlight {
+  position: fixed;
+  border-radius: 8px;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 9001;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(0, 171, 191, 0.6);
 }
 
-/* Asegurar que elementos target sean accesibles */
-[data-wizard-target],
-[data-wizard] {
-    position: relative;
-    z-index: 1;
+.wizard-tooltip {
+  position: fixed;
+  z-index: 9002;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  padding: 1.25rem;
+  max-width: 320px;
+  min-width: 260px;
+  pointer-events: all;
+  animation: wizardTooltipIn 0.2s ease;
 }
 
-/* Estilos para elementos resaltados */
-.wizard-highlighted {
-    position: relative;
-    z-index: 41 !important;
-    /* Higher than overlay (40) */
-    pointer-events: auto;
+@keyframes wizardTooltipIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-.wizard-highlighted::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    border-radius: inherit;
-    border: 2px solid transparent;
-    pointer-events: none;
-    z-index: 42;
+.wizard-tooltip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.wizard-tooltip-step {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #00abbf;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.wizard-tooltip-close {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  transition: background 0.15s;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.wizard-tooltip-close:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.wizard-tooltip-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.wizard-tooltip-content {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.wizard-tooltip-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.875rem;
+}
+
+.wizard-progress-dots {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.wizard-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  transition: all 0.2s;
+}
+
+.wizard-dot.active {
+  background: #00abbf;
+  width: 16px;
+  border-radius: 3px;
+}
+
+.wizard-dot.done {
+  background: #00abbf;
+  opacity: 0.4;
+}
+
+.wizard-tooltip-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wizard-btn-prev,
+.wizard-btn-next,
+.wizard-btn-finish {
+  padding: 0.4rem 0.875rem;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+}
+
+.wizard-btn-prev {
+  background: transparent;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+}
+
+.wizard-btn-prev:hover {
+  background: #f9fafb;
+}
+
+.wizard-btn-next {
+  background: #00abbf;
+  color: #ffffff;
+}
+
+.wizard-btn-next:hover {
+  background: #0090a0;
+  box-shadow: 0 4px 12px rgba(0, 171, 191, 0.3);
+}
+
+.wizard-btn-finish {
+  background: linear-gradient(135deg, #00abbf, #9d22e6);
+  color: #ffffff;
+}
+
+.wizard-btn-finish:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(0, 171, 191, 0.3);
+}
+
+/* ── Floating wizard button ── */
+.wizard-floating-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00abbf, #9d22e6);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 171, 191, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8999;
+  transition: all 0.2s ease;
+}
+
+.wizard-floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(0, 171, 191, 0.5);
+}
+
+.wizard-tooltip-arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  transform: rotate(45deg);
 }

@@ -1,6 +1,6 @@
-@import './fonts.css';
-@import './tailwind.css';
-@import './theme.css';
-@import './dashboard.css';
-@import './wizard.css';
-@import './cyberpunk.css';
+@import "tailwindcss";
+
+@import "./theme.css";
+@import "./cyberpunk.css";
+@import "./dashboard.css";
+@import "./wizard.css";

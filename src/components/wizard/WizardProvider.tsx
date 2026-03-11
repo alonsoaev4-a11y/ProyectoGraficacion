@@ -1,200 +1,94 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, ReactNode, useCallback, useEffect } from 'react';
 
-// Define types here or import if they exist elsewhere. 
-// For simplicity and avoiding circular deps, we can define them here or in a types file.
-// The existing project seems to have them in wizardSteps.ts, but let's be robust.
-
-export interface WizardStep {
-    id: string;
-    title: string;
-    description: string;
-    example?: string;
-    targetSelector: string;
-    position: 'top' | 'bottom' | 'left' | 'right';
-    spotlightPadding?: number; // Padding del spotlight (default: 8px)
-    action?: () => void; // Acción opcional al llegar al paso
-    validation?: () => boolean; // Validar antes de continuar
-}
-
-export interface WizardConfig {
-    module: string;
-    steps: WizardStep[];
-    autoStart?: boolean;
-    showProgress?: boolean;
+interface WizardStep {
+  id: string;
+  module: string;
+  title: string;
+  content: string;
+  target?: string;
 }
 
 interface WizardContextType {
-    isActive: boolean;
-    currentStep: number;
-    totalSteps: number;
-    currentModule: string;
-    toggleWizard: () => void;
-    nextStep: () => void;
-    prevStep: () => void;
-    skipWizard: () => void;
-    resetWizard: () => void;
-    loadModule: (config: WizardConfig) => void;
-    getCurrentStep: () => WizardStep | null;
-    completedModules: string[];
+  isActive: boolean;
+  currentStep: number;
+  steps: WizardStep[];
+  totalSteps: number;
+  startWizard: (module?: string) => void;
+  stopWizard: () => void;
+  nextStep: () => void;
+  prevStep: () => void;
+  goToStep: (n: number) => void;
 }
 
 const WizardContext = createContext<WizardContextType | null>(null);
 
-export function WizardProvider({ children }: { children: React.ReactNode }) {
-    const [isActive, setIsActive] = useState(false);
-    const [currentStep, setCurrentStep] = useState(0);
-    const [config, setConfig] = useState<WizardConfig | null>(null);
-    const [completedModules, setCompletedModules] = useState<string[]>([]);
-    const [showToast, setShowToast] = useState(false);
+const WIZARD_STEPS: WizardStep[] = [
+  { id: 'welcome', module: 'dashboard', title: '¡Bienvenido a Herman! 👋', content: 'Esta es tu plataforma Meta-CASE/Low-Code/No-Code. Te guiaré a través de los módulos principales para que seas productivo de inmediato.', target: '' },
+  { id: 'dash-create', module: 'dashboard', title: 'Crear proyecto', content: 'Haz clic en el botón "+ Crear nuevo proyecto" para comenzar. Necesitarás nombre, descripción y el tipo de app.', target: '' },
+  { id: 'dash-grid', module: 'dashboard', title: 'Tus proyectos', content: 'Aquí verás todos tus proyectos con barra de progreso, acciones rápidas (exportar, eliminar) y filtros de búsqueda.', target: '' },
+  { id: 'metadatos-info', module: 'metadatos', title: 'Módulo: Metadatos', content: 'El primer módulo es Información General. Define el nombre, descripción, tipo de app e industria de tu proyecto.', target: '' },
+  { id: 'metadatos-metodos', module: 'metadatos', title: 'Métodos de recolección', content: 'Selecciona cómo levantarás los requisitos: entrevistas, encuestas, historias de usuario, observación o análisis documental.', target: '' },
+  { id: 'requisitos-create', module: 'requisitos', title: 'Módulo: Requisitos', content: 'Captura los requisitos funcionales y no funcionales. Puedes filtrar por prioridad, estado y exportar a CSV.', target: '' },
+  { id: 'casosuso', module: 'casosUso', title: 'Módulo: Casos de Uso', content: 'Modela los casos de uso con flujos, actores, precondiciones y reglas de negocio. Los datos aquí alimentan automáticamente el Diagrama de Flujo.', target: '' },
+  { id: 'flujo', module: 'diagramaFlujo', title: 'Módulo: Diagrama de Flujo', content: 'Editor visual de flujos SVG. Los nodos se auto-generan desde el primer Caso de Uso disponible. Puedes arrastrar y conectar nodos.', target: '' },
+  { id: 'modelado', module: 'modelado', title: 'Módulo: Modelado de Datos', content: 'Diseña tu esquema de base de datos visualmente. Genera schema Prisma y DDL SQL automáticamente.', target: '' },
+  { id: 'panelia', module: 'generacion', title: '¡Pipeline de IA! 🤖', content: 'El módulo PanelIA conecta con OpenRouter para generar código Angular, FastAPI y MySQL en tiempo real usando WebSocket. ¡La parte principal de Herman!', target: '' },
+  { id: 'generacion', module: 'generacion', title: 'Módulo: Generación', content: 'Descarga el proyecto completo como ZIP con carpetas backend, frontend, database y specs, más un LEEME con instrucciones.', target: '' },
+  { id: 'auditoria', module: 'auditoria', title: 'Módulo: Auditoría', content: 'Registro de todos los cambios del proyecto con trazabilidad completa. Filtros por tipo de acción y paginación.', target: '' },
+  { id: 'finish', module: 'dashboard', title: '¡Listo para crear! 🚀', content: 'Ya conoces todos los módulos. Recuerda que el wizard siempre estará disponible con el botón "?" en la esquina inferior derecha. ¡Mucho éxito!', target: '' },
+];
 
-    useEffect(() => {
-        // Cargar progreso de localStorage
-        const saved = localStorage.getItem('herman_wizard_progress');
-        if (saved) {
-            try {
-                setCompletedModules(JSON.parse(saved));
-            } catch (e) {
-                console.error("Error parsing wizard progress:", e);
-            }
-        }
-    }, []);
+export function WizardProvider({ children }: { children: ReactNode }) {
+  const [isActive, setIsActive] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
+  const [steps] = useState(WIZARD_STEPS);
 
-    const loadModule = (newConfig: WizardConfig) => {
-        if (!newConfig || !newConfig.module) {
-            console.warn('WizardProvider: loadModule recibió una config inválida, ignorando.');
-            return;
-        }
-        // Si ya está cargado este módulo, no reiniciamos a menos que sea explícito
-        if (config?.module === newConfig.module) {
-            return;
-        }
+  useEffect(() => {
+    const done = localStorage.getItem('herman_wizard_done');
+    if (!done) {
+      // First time: offer wizard
+      const timer = setTimeout(() => setIsActive(true), 2000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
-        setConfig(newConfig);
-        setCurrentStep(0);
+  const startWizard = useCallback((module?: string) => {
+    if (module) {
+      const idx = steps.findIndex(s => s.module === module);
+      setCurrentStep(idx >= 0 ? idx : 0);
+    } else {
+      setCurrentStep(0);
+    }
+    setIsActive(true);
+  }, [steps]);
 
-        // Auto-start si es primera vez
-        if (newConfig.autoStart && !completedModules.includes(newConfig.module)) {
-            setIsActive(true);
-        }
-    };
+  const stopWizard = useCallback(() => {
+    setIsActive(false);
+    localStorage.setItem('herman_wizard_done', 'true');
+  }, []);
 
-    const nextStep = () => {
-        if (!config) return;
+  const nextStep = useCallback(() => {
+    if (currentStep < steps.length - 1) setCurrentStep(c => c + 1);
+    else stopWizard();
+  }, [currentStep, steps.length, stopWizard]);
 
-        const step = config.steps[currentStep];
-        if (step.validation && !step.validation()) {
-            // Aquí podríamos integrar un sistema de notificaciones (toast)
-            alert('Por favor completa este paso antes de continuar.');
-            return;
-        }
+  const prevStep = useCallback(() => {
+    if (currentStep > 0) setCurrentStep(c => c - 1);
+  }, [currentStep]);
 
-        // Ejecutar acción del paso si existe
-        if (step.action) {
-            step.action();
-        }
+  const goToStep = useCallback((n: number) => {
+    if (n >= 0 && n < steps.length) setCurrentStep(n);
+  }, [steps.length]);
 
-        if (currentStep < config.steps.length - 1) {
-            setCurrentStep(prev => prev + 1);
-        } else {
-            // Último paso - marcar como completado
-            const updated = [...completedModules, config.module];
-            // Remove duplicates just in case
-            const uniqueUpdated = Array.from(new Set(updated));
-            setCompletedModules(uniqueUpdated);
-            localStorage.setItem('herman_wizard_progress', JSON.stringify(uniqueUpdated));
-            setIsActive(false);
-            // Mostrar toast de celebración
-            setShowToast(true);
-            setTimeout(() => setShowToast(false), 4000);
-        }
-    };
-
-    const prevStep = () => {
-        if (currentStep > 0) {
-            setCurrentStep(prev => prev - 1);
-        }
-    };
-
-    const skipWizard = () => {
-        if (!config) {
-            setIsActive(false);
-            return;
-        }
-        // Marcar como visto aunque se haya saltado? O solo cerrar?
-        // El usuario pidió "persista progreso", asumimos que skip = hecho para no molestar de nuevo
-        const updated = [...completedModules, config.module];
-        const uniqueUpdated = Array.from(new Set(updated));
-        setCompletedModules(uniqueUpdated);
-        localStorage.setItem('herman_wizard_progress', JSON.stringify(uniqueUpdated));
-        setIsActive(false);
-    };
-
-    const resetWizard = () => {
-        setCurrentStep(0);
-        setIsActive(true);
-    };
-
-    return (
-        <WizardContext.Provider value={{
-            isActive,
-            currentStep,
-            totalSteps: config?.steps.length || 0,
-            currentModule: config?.module || '',
-            toggleWizard: () => setIsActive(!isActive),
-            nextStep,
-            prevStep,
-            skipWizard,
-            resetWizard,
-            loadModule,
-            getCurrentStep: () => config?.steps[currentStep] || null,
-            completedModules
-        }}>
-            {children}
-
-            {/* Toast de celebración */}
-            {showToast && (
-                <div
-                    style={{
-                        position: 'fixed',
-                        bottom: '2rem',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
-                        zIndex: 99999,
-                        background: 'linear-gradient(135deg, rgba(0,217,255,0.15), rgba(168,85,247,0.15))',
-                        backdropFilter: 'blur(20px)',
-                        border: '1px solid rgba(0,217,255,0.3)',
-                        borderRadius: '1rem',
-                        padding: '1rem 2rem',
-                        color: '#fff',
-                        fontWeight: 700,
-                        fontSize: '0.95rem',
-                        boxShadow: '0 0 30px rgba(0,217,255,0.2), 0 10px 40px rgba(0,0,0,0.4)',
-                        animation: 'wizardToastIn 0.4s ease-out',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.75rem',
-                    }}
-                >
-                    <span style={{ fontSize: '1.5rem' }}>🎉</span>
-                    ¡Tutorial completado! Ya dominas este módulo.
-                </div>
-            )}
-
-            {/* Toast animation keyframes */}
-            <style>{`
-                @keyframes wizardToastIn {
-                    from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-                    to { opacity: 1; transform: translateX(-50%) translateY(0); }
-                }
-            `}</style>
-        </WizardContext.Provider>
-    );
+  return (
+    <WizardContext.Provider value={{ isActive, currentStep, steps, totalSteps: steps.length, startWizard, stopWizard, nextStep, prevStep, goToStep }}>
+      {children}
+    </WizardContext.Provider>
+  );
 }
 
-export const useWizard = () => {
-    const context = useContext(WizardContext);
-    if (!context) {
-        throw new Error('useWizard must be used within a WizardProvider');
-    }
-    return context;
-};
+export function useWizard(): WizardContextType {
+  const ctx = useContext(WizardContext);
+  if (!ctx) throw new Error('useWizard must be used within WizardProvider');
+  return ctx;
+}
